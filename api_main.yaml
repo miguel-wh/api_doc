@@ -72,7 +72,7 @@ paths:
       $ref: 'sistema/paths/zones/post.yaml'
   '/zones/{zone_id}/':
     get:
-      $ref: 'sistema/paths/zones/detail.yaml'
+      $ref: 'sistema/paths/zones/details.yaml'
     put:
       $ref: 'sistema/paths/zones/put.yaml'
     delete:
