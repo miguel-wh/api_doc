@@ -65,9 +65,9 @@ x-tagGroups:
     tags:
       - user
 paths:
-  $ref: '/sistema/paths/zones.yaml'
+  $ref: 'sistema/paths/zones.yaml'
   
-  $ref: '/sistema/paths/olt.yaml'
+  $ref: 'sistema/paths/olt.yaml'
   
   /pet:
     parameters:
