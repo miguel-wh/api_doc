@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="https://admin.adminolt.com/static/img/favicon.08adee7071b3.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: 'rgba(255, 255, 255, 1)';
+      }
+    </style>
+    <title>Api AdminOLT</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="redoc-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
+    <script type="text/javascript">
+    (function() {
+      Redoc.init(
+        "https://raw.githubusercontent.com/miguel-wh/test/main/api2.yaml",
+        {
+          "untrustedSpec": true,
+          "theme": {
+            "colors": {
+              "primary": {
+                "main": "rgba(0, 105, 255, 1)",
+                "light": "#99c3ff",
+                "dark": "#002a66",
+                "contrastText": "#fff"
+              }
+            }
+          }
+        },
+        document.getElementById('redoc-container'));
+    })();
+    </script>
+  </body>
+</html>
