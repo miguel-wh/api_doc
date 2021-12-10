@@ -1,0 +1,73 @@
+type: object
+required:
+  - name
+properties:
+  id:
+    type: integer
+    description: OLT ID
+    minLength: 1
+    example: 1
+  name:
+    type: string
+    description: Name of OLT
+    minLength: 8
+    example: OLT VSOL GPON
+  host:
+    type: string
+    description: IP Connection
+    minLength: 8
+    example: 172.28.33.195
+  
+  plan:
+    properties:
+      id:
+        type: integer
+        description: Plan ID
+        minLength: 1
+        example: 1
+      name:
+        type: string
+        description: Name of Plan
+        minLength: 8
+        example: 10 USD
+      price:
+        type: string
+        description: Price of Plan
+        minLength: 8
+        example: 10.00
+  
+  hardware_version:
+    properties:
+      id:
+        type: integer
+        description: Hardware Version ID
+        minLength: 1
+        example: 1
+      model:
+        type: string
+        description: Model of Hardware Version
+        minLength: 8
+        example: Vsol-V1600G0
+      brand:
+        type: string
+        description: Brand of Hardware Version
+        minLength: 8
+        example: Vsol
+        
+  software_version:
+    properties:
+      id:
+        type: integer
+        description: Software Version ID
+        minLength: 1
+        example: 1
+      model:
+        type: string
+        description: Model of Software Version
+        minLength: 8
+        example: Vsol-V1600G0
+      version:
+        type: string
+        description: Version of Software Version
+        minLength: 8
+        example: 2.x

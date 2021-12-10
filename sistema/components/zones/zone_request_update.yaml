@@ -1,0 +1,14 @@
+type: object
+required:
+  - name
+properties:
+  name:
+    type: string
+    description: Name of Zone
+    minLength: 8
+    example: Zone 1
+  description:
+    type: string
+    description: Description of Zone
+    minLength: 8
+    example: This is my new Zone
