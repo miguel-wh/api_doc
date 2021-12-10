@@ -69,67 +69,7 @@ paths:
     get:
       $ref: 'sistema/paths/zones/get.yaml'
     post:
-      tags:
-        - Zones
-      summary: Add a new zone
-      description: Add new zone.
-      operationId: addZone
-      requestBody:
-        $ref: '#/components/requestBodies/ZoneRequest'
-      responses:
-        '201':
-          description: Created
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ZoneResponse'
-        '203':
-          description: Non-Authoritative Information
-          content:
-            application/json:
-              example:
-                message_status: "El token enviado no es valido"
-        '400':
-          description: Bad Request
-          content:
-            application/json:
-              example:
-                name: [
-                  "Este campo es requerido"
-                ]
-        '401': 
-          description: Unauthorized
-          content:
-            application/json:
-              example:
-                detail: "Las credenciales de autenticación no se proveyeron."
-        '405':
-          description: Method Not Allowed
-          content:
-            application/json:
-              example:
-                detail: "Metodo {{put,get,delete}} no permitido"
-      x-code-samples:
-        - lang: Python
-          source: |
-            import requests
-            endpoint = "https://{{subdomain}}.adminolt.com/api/zones/"
-        
-            headers = {
-                "Authorization": "Token {{token}}" 
-            }
-            
-            data = {
-                "name": "Zone 1",
-                "description": "This is my Zone"
-            }
-            
-            response = requests.post(url=endpoint, headers=headers, data=data)
-            print(response.content)
-      security:
-        - api_key: []
+      $ref: 'sistema/paths/zones/post.yaml'
   '/zones/{zone_id}/':
     get:
       tags:
