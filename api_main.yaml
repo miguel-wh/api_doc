@@ -67,7 +67,7 @@ x-tagGroups:
 paths:
   /zones/:
     get:
-      $ref: 'get.yaml'
+      $ref: 'sistema/paths/zones/get.yaml'
     post:
       tags:
         - Zones
