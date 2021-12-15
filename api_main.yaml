@@ -41,8 +41,6 @@ externalDocs:
   description: Find out how to create Github repo for your OpenAPI spec.
   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
-  - name: System
-    description: Everything about system
   - name: Zones
     description: Everything about your Zones
   - name: OLT
@@ -51,7 +49,10 @@ x-tagGroups:
   - name: Sistema
     tags:
       - Zones
-      - OLT
+x-tagGroups:
+   tags:
+    - name: OLT
+  
 paths:
   /zones/:
     get:
