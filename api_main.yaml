@@ -52,13 +52,6 @@ x-tagGroups:
     tags:
       - Zones
       - OLT
-  - name: General
-    tags:
-      - pet
-      - store
-  - name: User Management
-    tags:
-      - user
 paths:
   /zones/:
     get:
