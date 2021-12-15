@@ -45,24 +45,11 @@ tags:
     description: Everything about your Zones
   - name: OLT
     description: Everything about your OLTs
-  - name: pet
-    description: Everything about your Pets
-  - name: store
-    description: Access to Petstore orders
-  - name: user
-    description: Operations about user
 x-tagGroups:
   - name: Sistema
     tags:
       - Zones
       - OLT
-  - name: General
-    tags:
-      - pet
-      - store
-  - name: User Management
-    tags:
-      - user
 paths:
   /zones/:
     get:
