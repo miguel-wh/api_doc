@@ -43,14 +43,15 @@ externalDocs:
 tags:
   - name: Zones
     description: Everything about your Zones
-  - name: OLT
+  - name: OLTs
     description: Everything about your OLTs
 x-tagGroups:
   - name: System
     tags:
       - Zones
-  tags:
-    - OLT
+  - name: OLT
+    tags:
+      - OLTs
 paths:
   /zones/:
     get:

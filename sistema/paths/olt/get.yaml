@@ -1,5 +1,5 @@
 tags:
-- OLT
+- OLTs
 summary: Get all OLT
 description: Return all OLT
 operationId: getOLTAll
