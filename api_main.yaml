@@ -46,10 +46,11 @@ tags:
   - name: OLT
     description: Everything about your OLTs
 x-tagGroups:
-  - name: Sistema
+  - name: System
     tags:
       - Zones
-      - OLT
+  - tags:
+    - OLT
 paths:
   /zones/:
     get:
