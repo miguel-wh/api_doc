@@ -48,15 +48,15 @@ tags:
   - name: Zones
     description: Everything about your Zones
 x-tagGroups:
-  - name: System
-    tags:
-      - Zones
-  - name: OLT
-    tags:
-      - OLTs
   - name: ONU
     tags:
       - ONUs
+  - name: OLT
+    tags:
+      - OLTs
+  - name: System
+    tags:
+      - Zones
 paths:
   /zones/:
     get:
