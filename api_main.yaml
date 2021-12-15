@@ -41,10 +41,12 @@ externalDocs:
   description: Find out how to create Github repo for your OpenAPI spec.
   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
-  - name: Zones
-    description: Everything about your Zones
+  - name: ONUs
+    description: Everything about your ONUs
   - name: OLTs
     description: Everything about your OLTs
+  - name: Zones
+    description: Everything about your Zones
 x-tagGroups:
   - name: System
     tags:
@@ -52,6 +54,9 @@ x-tagGroups:
   - name: OLT
     tags:
       - OLTs
+  - name: ONU
+    tags:
+      - ONUs
 paths:
   /zones/:
     get:
@@ -67,7 +72,7 @@ paths:
       $ref: 'sistema/paths/zones/delete.yaml'
   /olt-list/:
     get:
-      $ref: 'sistema/paths/olt/get.yaml'
+      $ref: 'olt/paths/list_olts.yaml'
 components:
   schemas:
     ApiResponse:
@@ -89,9 +94,9 @@ components:
     ZoneResponseUpdate:
       $ref: 'sistema/components/zones/zone_response_update.yaml'
     OLTRequest:
-      $ref: 'sistema/components/olt/olt_request.yaml'
+      $ref: 'olt/components/olt_request.yaml'
     OLTResponse:
-      $ref: 'sistema/components/olt/olt_response.yaml'
+      $ref: 'olt/components/olt_response.yaml'
   requestBodies:
     ZoneRequest:
       content:
