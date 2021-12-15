@@ -46,12 +46,17 @@ tags:
   - name: OLT
     description: Everything about your OLTs
 x-tagGroups:
-  - name: Sistema
+  - name: OLT
     tags:
       - Zones
-x-tagGroups:
-   tags:
-    - name: OLT
+      - OLT
+  - name: General
+    tags:
+      - pet
+      - store
+  - name: User Management
+    tags:
+      - user
   
 paths:
   /zones/:
