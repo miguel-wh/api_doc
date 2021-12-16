@@ -38,3 +38,226 @@ properties:
       cvlan:
         type: integer
         example: 110
+      svlan:
+        type: integer
+        example: 110
+      comment:
+        type: string
+        example: ""
+      address:
+        type: string
+        example: ""
+      phone:
+        type: string
+        example: ""
+      longitude:
+        type: string
+        example: ""
+      latitude:
+        type: string
+        example: ""
+      external_id:
+        example: null
+      enable:
+        type: boolean
+        example: true
+      created_at:
+        type: string
+        example:  "2021-12-16T08:59:57.654520-05:00"
+      updated_at:
+        type: string
+        example: "2021-12-16T09:27:14.935609-05:00"
+      deleted_at:
+        type: string
+        example: null
+      
+      olt_name:
+        type: string
+        example: Huawei MA5680T
+      olt_id:
+        type: integer
+        example: 4
+      image:
+        type: string
+        example: "/media/empresa/onu/hg8326r.png"
+      splitter:
+        type: string
+        example: NA
+      status:
+        type: string
+        example: Online
+      type:
+        type: string
+        example: null
+      olt_class_type:
+        type: string
+        example: Huawei
+      model_id:
+        type: integer
+        example: 11
+            
+      
+      download_speed:
+        type: object
+        properties:
+          id:
+            type: integer
+            example: 55
+          uuid:
+            type: string
+            example: da048f24-8571-4f43-9991-2fd6d05afdea
+          name:
+            type: string
+            example: 100 MEGAS
+          type:
+            type: string
+            example: Internet
+          speed_type:
+            type: string
+            example: Descarga
+          speed:
+            type: integer
+            example: 100
+          description:
+            type: string
+            example: ""
+          default:
+            type: boolean
+            example: true
+          imported:
+            type: boolean
+            example: false
+          created:
+            type: string
+            example: "2021-04-27T17:27:27.422420-05:00"
+          updated_at:
+            type: string
+            example: "2021-04-27T17:27:27.422476-05:00"
+      
+      upload_speed:
+        type: object
+        properties:
+          id:
+            type: integer
+            example: 4
+          uuid:
+            type: string
+            example: f937d456-efc0-4241-9f36-367963b9a695
+          type:
+            type: string
+            example: Internet
+          speed_type:
+            type: string
+            example: Subida
+          speed:
+            type: integer
+            example: 100
+          description:
+            type: string
+            example: ""
+          default:
+            type: boolean
+            example: true
+          imported:
+            type: boolean
+            example: false
+          created:
+            type: string
+            example: "2020-08-04T11:55:10.879108-05:00"
+          updated_at:
+            type: string
+            example: "2020-08-04T11:55:10.879128-05:00"
+      
+      zone:
+        type: object
+        properties:
+          name:
+            type: string
+            example: ""
+      
+      service_port_onu:
+        type: array
+        items:
+         type: object
+         properties:
+          id:
+            type: integer
+            example: 995
+          service_port:
+            type: integer
+            example: 3
+          interface:
+            type: string
+            example: "0/11/0"
+          interface_index:
+            type: integer
+            example: 4194394112
+          onu_index:
+            type: integer
+            example: 0
+          service_type:
+            type: string
+            example: INTERNET
+          cvlan:
+            type: integer
+            example: 110
+          svlan:
+            type: integer
+            example: 11
+          used:
+            type: boolean
+            example: true
+          created_at:
+            type: string
+            example: "2021-12-16T08:59:51.571942-05:00"
+          upload_speed:
+            type: integer
+            example: 4
+          download_speed:
+            type: integer
+            example: 55
+          olt:
+            type: integer
+            example: 4
+          onu:
+            type: integer
+            example: 1070
+          
+      onu_index_onu:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: integer
+              example: 1176
+            board:
+              type: integer
+              example: 0
+            slot:
+              type: integer
+              example: 11
+            port:
+              type: integer
+              example: 0
+            interface:
+              type: string
+              example: "0/11/0"
+            interface_index:
+              type: integer
+              example: 419439411
+            onu_index:
+              type: integer
+              example: 0
+            used:
+              type: boolean
+              example: true
+            created_at:
+              type: string
+              example: "2021-12-16T08:59:50.828393-05:00"
+            olt:
+              type: integer
+              example: 4
+            onu:
+              type: integer
+              example: 100
