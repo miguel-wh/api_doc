@@ -11,7 +11,7 @@ responses:
         schema:
           type: array
           items:
-            $ref: '#/components/schemas/ONUResponse'
+            $ref: '#/components/schemas/OnuUnauthorizedResponse'
   '203':
     description: Non-Authoritative Information
     content:
@@ -34,7 +34,7 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/olt-list/"
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/unauthorized/"
       headers = {
           "Authorization": "Token {{token}}" 
       }

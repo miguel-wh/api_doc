@@ -102,9 +102,9 @@ components:
       $ref: 'olt/components/olt_request.yaml'
     OLTResponse:
       $ref: 'olt/components/olt_response.yaml'
-    ONURequest:
+    OnuUnauthorizedRequest:
       $ref: 'onu/components/list_unauthorized_onu_request.yaml'
-    ONUResponse:
+    OnuUnauthorizedResponse:
       $ref: 'onu/components/list_unauthorized_onu_response.yaml'
   requestBodies:
     ZoneRequest:
