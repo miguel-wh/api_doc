@@ -16,9 +16,7 @@ responses:
     description: 'Successful Operation'
     content:
       application/json:
-        schema:
-          items:
-            $ref: '#/components/schemas/GetOnuBySnResponse'
+        $ref: '#/components/schemas/GetOnuBySnResponse'
   '203':
     description: Non-Authoritative Information
     content:
