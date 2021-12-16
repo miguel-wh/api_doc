@@ -1,6 +1,7 @@
 properties:
   data:
-type: array
+    type: array
+
   properties:
     id:
       type: integer
@@ -17,5 +18,4 @@ type: array
       description: SN ONU
       minLength: 8
       example: 48575443B082CE58
-      
       
