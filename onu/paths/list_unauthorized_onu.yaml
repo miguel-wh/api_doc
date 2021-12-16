@@ -1,7 +1,7 @@
 tags:
 - ONUs
 summary: Get all unauthorized onu
-summary: Get all unauthorized onu trough of websocket with key-> facility
+description: Get all unauthorized onu trough of websocket with key-> facility
 operationId: getOnuAll
 responses:
   '200':
