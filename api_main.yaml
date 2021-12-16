@@ -46,6 +46,7 @@ x-tagGroups:
     tags:
       - Zones
 paths:
+  # All about System
   /zones/:
     get:
       $ref: 'sistema/paths/zones/get.yaml'
@@ -58,12 +59,17 @@ paths:
       $ref: 'sistema/paths/zones/put.yaml'
     delete:
       $ref: 'sistema/paths/zones/delete.yaml'
+  # All about OLTs
   /olt-list/:
     get:
       $ref: 'olt/paths/list_olts.yaml'
+  # All about ONUs
   /onu/unauthorized/:
     get:
       $ref: 'onu/paths/list_unauthorized_onu.yaml'
+  /onus/authorized-by-sn/<str:sn>/:
+    get:
+      $ref: 'onu/paths/get_authorized-by-sn.yaml'
 components:
   schemas:
     ApiResponse:
@@ -88,10 +94,13 @@ components:
       $ref: 'olt/components/olt_request.yaml'
     OLTResponse:
       $ref: 'olt/components/olt_response.yaml'
+    # ONUs
     OnuUnauthorizedRequest:
       $ref: 'onu/components/list_unauthorized_onu_request.yaml'
     OnuUnauthorizedResponse:
       $ref: 'onu/components/list_unauthorized_onu_response.yaml'
+    GetOnuBySnResponse:
+      $ref: 'onu/components/get_authorized-by-sn_response.yaml'
   requestBodies:
     ZoneRequest:
       content:

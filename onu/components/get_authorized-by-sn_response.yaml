@@ -1,0 +1,23 @@
+properties:
+  data:
+type: array
+  type: object
+
+    properties:
+      id:
+        type: integer
+        description: ONU ID
+        minLength: 1
+        example: 1
+      uuid:
+        type: string
+        description: UUID of ONU
+        minLength: 8
+        example: c5b11e35-2edc-42cf-b3ee-8ca97bc5f641
+      sn:
+        type: string
+        description: SN ONU
+        minLength: 8
+        example: 48575443B082CE58
+      
+      
