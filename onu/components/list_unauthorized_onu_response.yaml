@@ -1,7 +1,5 @@
 type: object
 properties:
   facility:
-    type: integer
-    description: facility
-    minLength: 1
-    example: eeeuj-3231-2swq-212f1-ssq3q-21342
+    type: string
+    example: a474b7e8-1056-4e7d-9a71-54ec32e5152d

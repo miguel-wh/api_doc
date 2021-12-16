@@ -1,7 +1,7 @@
 tags:
 - ONUs
 summary: Get all unauthorized onu
-description: Return all unauthorized onu
+description: Get websocket with facility
 operationId: getOnuAll
 responses:
   '200':
@@ -9,9 +9,7 @@ responses:
     content:
       application/json:
         schema:
-          type: array
-          items:
-            $ref: '#/components/schemas/OnuUnauthorizedResponse'
+          $ref: '#/components/schemas/OnuUnauthorizedResponse'
   '203':
     description: Non-Authoritative Information
     content:
