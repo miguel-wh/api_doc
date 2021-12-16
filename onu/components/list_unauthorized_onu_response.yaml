@@ -1,8 +1,9 @@
+type: object
 required:
   - facility
 properties:
   facility:
     type: integer
-    description: facilityxxxx
+    description: facility
     minLength: 1
     example: eeeuuj-3231-2dswq-212ff1-ssq3wq-21342f43
