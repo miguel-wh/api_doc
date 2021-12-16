@@ -51,9 +51,11 @@ x-tagGroups:
   - name: ONU
     tags:
       - ONUs
+
   - name: OLT
     tags:
       - OLTs
+
   - name: System
     tags:
       - Zones
@@ -73,6 +75,9 @@ paths:
   /olt-list/:
     get:
       $ref: 'olt/paths/list_olts.yaml'
+  /onu/unauthorized/:
+    get:
+      $ref: 'onu/paths/list_unauthorized_onu.yaml'
 components:
   schemas:
     ApiResponse:
@@ -97,6 +102,10 @@ components:
       $ref: 'olt/components/olt_request.yaml'
     OLTResponse:
       $ref: 'olt/components/olt_response.yaml'
+    ONURequest:
+      $ref: 'onu/components/list_unauthorized_onu_request.yaml'
+    ONUResponse:
+      $ref: 'onu/components/list_unauthorized_onu_response.yaml'
   requestBodies:
     ZoneRequest:
       content:

@@ -1,0 +1,9 @@
+type: object
+required:
+  - facility
+properties:
+  facility:
+    type: string
+    description: data
+    minLength: 8
+    example: string
