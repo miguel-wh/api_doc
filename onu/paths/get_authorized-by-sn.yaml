@@ -17,9 +17,7 @@ responses:
     content:
       application/json:
         schema:
-          type: "object"
-          items:
-            $ref: '#/components/schemas/GetOnuBySnResponse'
+          $ref: '#/components/schemas/GetOnuBySnResponse'
   '203':
     description: Non-Authoritative Information
     content:

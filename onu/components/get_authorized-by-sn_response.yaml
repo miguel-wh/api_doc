@@ -1,22 +1,40 @@
-type: "object"
+type: object
 properties:
   data:
-    type: "array"
+    type: array
     items:
-      type: "object"
-        id:
-          type: integer
-          description: ONU ID
-          minLength: 1
-          example: 1
-        uuid:
-          type: string
-          description: UUID of ONU
-          minLength: 8
-          example: c5b11e35-2edc-42cf-b3ee-8ca97bc5f641
-        sn:
-          type: string
-          description: SN ONU
-          minLength: 8
-          example: 48575443B082CE58
-        
+     type: object
+     properties:
+      uuid:
+        type: string
+        example: c5b11e35-2edc-42cf-b3ee-8ca97bc5f641
+      id:
+        type: integer
+        example: 1070
+      sn:
+        type: string
+        example: 48575443B082CE58
+      mode:
+        type: string
+        example: Routing
+      signal_level:
+        type: string
+        example: Stable
+      board:
+        type: integer
+        example: 0
+      slot:
+        type: integer
+        example: 11
+      port:
+        type: integer
+        example: 0
+      interface_type:
+        type: string
+        example: gpon
+      name:
+        type: string
+        example: huawei_CE58
+      cvlan:
+        type: integer
+        example: 110
