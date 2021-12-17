@@ -33,7 +33,7 @@ responses:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/OnuUnauthorizedResponseWS'
+            
 
 x-code-samples:
   - lang: Python
