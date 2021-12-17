@@ -1,0 +1,18 @@
+type: object
+properties:
+  name:
+    type: string
+    example: Zona centro
+  description:
+    type: string
+    example: Estructura de Red Zona Centro
+  coordinates:
+    type: object
+    properties:
+      latitude:
+        type: string
+        example: 19.486972298326574
+      longitude:
+        type: string
+        example: -98.90123423136662
+              

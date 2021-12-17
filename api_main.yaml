@@ -67,6 +67,9 @@ paths:
   /list-maps/:
     get:
       $ref: 'sistema/paths/maps/get_list_maps.yaml'
+  /map/<int:id_map>/:
+    get:
+      $ref: 'sistema/paths/maps/get_map_by_id.yaml'
 
   # All about OLTs
   /olt-list/:
@@ -111,6 +114,9 @@ components:
     # Maps
     GetAllListMaps:
       $ref: 'sistema/components/maps/list-maps_response.yaml'
+    GetMapByIdResponse:
+      $ref: 'sistema/components/maps/get_map_by_id.yaml'
+    #OLTs
     OLTRequest:
       $ref: 'olt/components/olt_request.yaml'
     OLTResponse:
