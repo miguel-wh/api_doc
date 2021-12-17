@@ -1,8 +1,8 @@
 tags:
 - Maps
-summary: Get a Map by ID
-description: Return a MAP by ID
-operationId: getMapById
+summary: Get list of markers of map by ID
+description: Return list of markers of map by ID
+operationId: getListMarkersMapById
 parameters:
   - name: id_map
     in: path
@@ -17,7 +17,7 @@ responses:
     content:
       application/json:
         schema:
-          $ref: '#/components/schemas/GetMapByIdResponse'
+          $ref: '#/components/schemas/GetListMarkersMapByIdResponse'
   '203':
     description: Non-Authoritative Information
     content:
@@ -46,7 +46,7 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/onus/authorized-by-sn/<str:sn>/"
+      endpoint = "https://{{subdomain}}.adminolt.com/api/list-markers/<int:id_map>/"
       headers = {
           "Authorization": "Token {{token}}" 
       }

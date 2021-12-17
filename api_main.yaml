@@ -70,11 +70,15 @@ paths:
   /map/<int:id_map>/:
     get:
       $ref: 'sistema/paths/maps/get_map_by_id.yaml'
+  /list-markers/<int:id_map>/:
+    get:
+      $ref: 'sistema/paths/maps/get_list_of_markers_of_map_by_id.yaml'
 
   # All about OLTs
   /olt-list/:
     get:
       $ref: 'olt/paths/list_olts.yaml'
+
   # All about ONUs
   /onu/unauthorized/:
     get:
@@ -116,6 +120,8 @@ components:
       $ref: 'sistema/components/maps/list-maps_response.yaml'
     GetMapByIdResponse:
       $ref: 'sistema/components/maps/get_map_by_id_response.yaml'
+    GetListMarkersMapByIdResponse:
+      $ref: 'sistema/components/maps/get_list_of_markers_of_map_by_id_response.yaml'
     #OLTs
     OLTRequest:
       $ref: 'olt/components/olt_request.yaml'
