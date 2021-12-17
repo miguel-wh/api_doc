@@ -38,7 +38,7 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com//list-maps/"
+      endpoint = "https://{{subdomain}}.adminolt.com/api/list-maps/"
       headers = {
           "Authorization": "Token {{token}}" 
       }
