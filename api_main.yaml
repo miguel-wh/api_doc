@@ -33,6 +33,8 @@ tags:
     description: Everything about your OLTs
   - name: Zones
     description: Everything about your Zones
+  - name: Maps
+    description: Everything about you Maps
 x-tagGroups:
   - name: ONU
     tags:
@@ -45,8 +47,10 @@ x-tagGroups:
   - name: System
     tags:
       - Zones
+      - Maps
 paths:
-  # All about System
+  ## All about System
+  # ZONES
   /zones/:
     get:
       $ref: 'sistema/paths/zones/get.yaml'
@@ -59,6 +63,11 @@ paths:
       $ref: 'sistema/paths/zones/put.yaml'
     delete:
       $ref: 'sistema/paths/zones/delete.yaml'
+  # Maps
+  /list-maps/:
+    get:
+      $ref: 'sistema/paths/maps/get_list_maps.yaml'
+
   # All about OLTs
   /olt-list/:
     get:
@@ -89,6 +98,8 @@ components:
           type: string
         message:
           type: string
+    ## System
+    # Zones
     ZoneRequest:
       $ref: 'sistema/components/zones/zone_request.yaml'
     ZoneResponse:
@@ -97,6 +108,9 @@ components:
       $ref: 'sistema/components/zones/zone_request_update.yaml'
     ZoneResponseUpdate:
       $ref: 'sistema/components/zones/zone_response_update.yaml'
+    # Maps
+    GetAllListMaps:
+      $ref: 'sistema/components/maps/list-maps_response.yaml'
     OLTRequest:
       $ref: 'olt/components/olt_request.yaml'
     OLTResponse:

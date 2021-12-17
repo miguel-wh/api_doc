@@ -1,23 +1,15 @@
 tags:
-- ONUs
-summary: Get a ONU by SN
-description: Return a ONU by SN.    
-operationId: getONUBySN
-parameters:
-  - name: sn
-    in: path
-    description: SN of ONU to return
-    required: true
-    schema:
-      type: integer
-      format: number
+- Maps
+summary: Get all list maps
+description: Return all list maps   
+operationId: getListMaps
 responses:
   '200':
     description: 'Successful Operation'
     content:
       application/json:
         schema:
-          $ref: '#/components/schemas/GetOnuBySnResponse'
+          $ref: '#/components/schemas/GetAllListMaps'
   '203':
     description: Non-Authoritative Information
     content:
@@ -46,7 +38,7 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/onus/authorized-by-sn/<str:sn>/"
+      endpoint = "https://{{subdomain}}.adminolt.com//list-maps/"
       headers = {
           "Authorization": "Token {{token}}" 
       }
