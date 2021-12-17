@@ -3,6 +3,14 @@ tags:
 summary: Get signal of authorized onu
 description: Get signal of authorized onu trough of websocket with key-> facility
 operationId: getSignalOfuthorizedOnu
+parameters:
+  - name: id_onu
+    in: path
+    description: id_onu of ONU to return
+    required: true
+    schema:
+      type: integer
+      format: number
 responses:
   '200':
     description: Successful Operation
