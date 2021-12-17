@@ -9,7 +9,7 @@ parameters:
     description: ID of MAP to return
     required: true
     schema:
-      type: integer
+      type: string
       format: number
 responses:
   '200':
