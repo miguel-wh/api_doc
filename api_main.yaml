@@ -133,7 +133,7 @@ components:
     OnuUnauthorizedResponse:
       $ref: 'onu/components/list_unauthorized_onu_response.yaml'
     OnuUnauthorizedResponseWS:
-      $ref: 'onu/components/list_unauthorized_onu_response_WS.yaml'
+      $ref: 'onu/components/list_unauthorized_onu_response_ws.yaml'
     GetOnuBySnResponse:
       $ref: 'onu/components/get_authorized-by-sn_response.yaml'
     GetSignalAuthorizedOnu:
