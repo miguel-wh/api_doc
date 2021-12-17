@@ -1,4 +1,5 @@
 type: object
+description: Data for WebSockettt
 properties:
   unauthorized_onus:
     type: object
