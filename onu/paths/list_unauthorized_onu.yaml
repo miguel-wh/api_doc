@@ -29,7 +29,7 @@ responses:
         example:
           detail: "Metodo {{put,post,delete}} no permitido"
   '101':
-    description: "TEST"
+    description: "Data for websocket using key: facility"
     content:
       application/json:
         schema:
