@@ -1,12 +1,12 @@
 tags:
 - ONUs
-summary: Get a ONU by SN (Serial Number)
+summary: Get a ONU by SN
 description: Return a ONU by SN.    
 operationId: getONUBySN
 parameters:
   - name: sn
     in: path
-    description: SN of ONU to return
+    description: SN (Serial Number) of ONU to return
     required: true
     schema:
       type: string
