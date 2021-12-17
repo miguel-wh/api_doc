@@ -40,7 +40,7 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/info-onu-authorized/run-status-onu/<int:pk>/"
+      endpoint = "https://{{subdomain}}.adminolt.com/api/info-onu-authorized/run-status-onu/<int:id_onu>/"
       headers = {
           "Authorization": "Token {{token}}" 
       }

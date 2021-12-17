@@ -89,7 +89,7 @@ paths:
   /onu/olt-rx-signal/<int:id_onu>/:
     get:
       $ref: 'onu/paths/get_signal_authorized_onu.yaml'
-  /info-onu-authorized/run-status-onu/<int:pk>/:
+  /info-onu-authorized/run-status-onu/<int:id_onu>/:
     get:
       $ref: 'onu/paths/get_status_authorized_onu.yaml'
 
