@@ -1,5 +1,5 @@
 tags:
-- ONUs
+- Maps
 summary: Get a Map by ID
 description: Return a MAP by ID
 operationId: getMapById
