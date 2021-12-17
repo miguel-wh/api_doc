@@ -1,0 +1,52 @@
+type: object
+properties:
+  unauthorized_onus:
+    type: object
+    properties:
+      48575443B082CE58:
+        type: object
+        properties:
+          interface:
+            type: string
+            example: 48575443B082CE58
+          chasis:
+            type: string
+            example: 0
+          slot:
+            type: string
+            example: 11
+          port:
+            type: string
+            example: "0"
+          olt:
+            type: string
+            example: Huawei MA5680T
+          onu_type:
+            type: string
+            example: 326R
+          olt_id:
+            type: integer
+            example: 4
+          class_type:
+            type: string
+            example: Huawei
+          onu_type_id:
+            type: integer
+            example: 11
+          onu_type_mode:
+            type: string
+            example: Bridging/Routing
+          interface_id:
+            type: string
+            example: 4194394112
+          sn:
+            type: string
+            description: Serial number of ONU
+            example: 48575443B082CE58
+  
+  status:
+    type: string
+    example: DONE
+  task_id:
+    type: string
+    example: 41ada76b-d78a-44f5-91b2-cfb088078bea
