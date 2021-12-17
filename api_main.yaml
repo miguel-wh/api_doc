@@ -115,7 +115,7 @@ components:
     GetAllListMaps:
       $ref: 'sistema/components/maps/list-maps_response.yaml'
     GetMapByIdResponse:
-      $ref: 'sistema/components/maps/get_map_by_id.yaml'
+      $ref: 'sistema/components/maps/get_map_by_id_response.yaml'
     #OLTs
     OLTRequest:
       $ref: 'olt/components/olt_request.yaml'
