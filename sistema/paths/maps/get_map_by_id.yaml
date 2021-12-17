@@ -46,7 +46,7 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/onus/authorized-by-sn/<str:sn>/"
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onus/authorized-by-sn/<int:id_map>/"
       headers = {
           "Authorization": "Token {{token}}" 
       }

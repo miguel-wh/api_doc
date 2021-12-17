@@ -1,6 +1,6 @@
 tags:
 - ONUs
-summary: Get a ONU by SN
+summary: Get a ONU by SN (Serial Number)
 description: Return a ONU by SN.    
 operationId: getONUBySN
 parameters:
@@ -9,8 +9,8 @@ parameters:
     description: SN of ONU to return
     required: true
     schema:
-      type: integer
-      format: number
+      type: string
+      format: string character
 responses:
   '200':
     description: 'Successful Operation'
