@@ -72,7 +72,10 @@ paths:
       $ref: 'onu/paths/get_authorized-by-sn.yaml'
   /onu/olt-rx-signal/<int:id_onu>/:
     get:
-      $ref: 'onu/paths/get_signal_of_onu.yaml'
+      $ref: 'onu/paths/get_signal_authorized_onu.yaml'
+  /info-onu-authorized/run-status-onu/<int:pk>/:
+    get:
+      $ref: 'onu/paths/get_status_authorized_onu.yaml'
 
 components:
   schemas:
@@ -107,6 +110,8 @@ components:
       $ref: 'onu/components/get_authorized-by-sn_response.yaml'
     GetSignalAuthorizedOnu:
       $ref: 'onu/components/get_signal_of_onu_response.yaml'
+    GetStatusAuthorizedOnu:
+      $ref: 'onu/components/get_status_authorized_onu_respose.yaml'
   requestBodies:
     ZoneRequest:
       content:
