@@ -8,6 +8,7 @@ properties:
     example: Estructura de Red Zona Centro
   coordinates:
     type: object
+    description: "posicion del zona"
     properties:
       latitude:
         type: string
