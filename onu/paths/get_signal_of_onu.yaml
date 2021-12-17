@@ -1,0 +1,40 @@
+tags:
+- ONUs
+summary: Get signal of authorized onu
+description: Get signal of authorized onu trough of websocket with key-> facility
+operationId: getSignalOfuthorizedOnu
+responses:
+  '200':
+    description: Successful Operation
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/GetSignalAuthorizedOnu'
+  '203':
+    description: Non-Authoritative Information
+    content:
+      application/json:
+        example:
+          message_status: "El token enviado no es valido"      
+  '401':
+    description: Unauthorized
+    content:
+      application/json:
+        example:
+          detail: "Las credenciales de autenticación no se proveyeron."
+  '405':
+    description: Method Not Allowed
+    content:
+      application/json:
+        example:
+          detail: "Metodo {{put,post,delete}} no permitido"
+x-code-samples:
+  - lang: Python
+    source: |
+      import requests
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/olt-rx-signal/<int:id_onu>/"
+      headers = {
+          "Authorization": "Token {{token}}" 
+      }
+      response = requests.get(url=endpoint, headers=headers)
+      print(response.content)
