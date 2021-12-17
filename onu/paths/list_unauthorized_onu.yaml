@@ -29,9 +29,11 @@ responses:
         example:
           detail: "Metodo {{put,post,delete}} no permitido"
   '101':
-    description: "Data for WebSocket"
-    schema:
-      $ref: '#/components/schemas/OnuUnauthorizedResponseWS'
+    description: "TEST"
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/OnuUnauthorizedResponseWS'
 
 x-code-samples:
   - lang: Python
