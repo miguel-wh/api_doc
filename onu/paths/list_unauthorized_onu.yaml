@@ -1,7 +1,7 @@
 tags:
 - ONUs
 summary: Get all unauthorized onu
-description: Get all unauthorized onu [#section/WebSocket](Example)
+description: If status == 200 To obtain data a websocket connection is required, [index.html#section/WebSocket](Example)
 operationId: getOnuAll
 responses:
   '200':
