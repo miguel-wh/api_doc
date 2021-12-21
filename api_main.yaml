@@ -23,12 +23,12 @@ info:
     For this example, it is necessary to query the endpoint from the back-end, and send the key-> facility front-end (Client)
     In javascript import the following libraries.
     ```
-      <input id="WEBSOCKET_URI" type="hidden" value="wss://{{subdomain}}.adminolt.com/ws/">
+      <input id="WEBSOCKET_URI" type="hidden" value="wss://{{subdomain}}.adminolt.com/ws/"> <!-- replace your subdomain -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
       <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
     ```
-    
+
     **In your javascript script**
     ```
       var data_facility = "{{facility}}"
@@ -59,7 +59,7 @@ info:
       <body>
 
       </body>
-      <input id="WEBSOCKET_URI" type="hidden" value="wss://{{subdomain}}.adminolt.com/ws/">
+      <input id="WEBSOCKET_URI" type="hidden" value="wss://{{subdomain}}.adminolt.com/ws/"> <!-- replace your subdomain -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
       <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
