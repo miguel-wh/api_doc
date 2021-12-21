@@ -11,7 +11,7 @@ info:
     # Introduction
     This API is documented
     # WebSocket
-    ## Consuming websocket
+    ## Example 1
     ```
     <!DOCTYPE html>
       <html>
@@ -48,6 +48,7 @@ info:
       </script>
       </html>
     ```
+    ## Example 2
 
   version: 1.0.0
   title: Api AdminOLT
