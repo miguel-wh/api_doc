@@ -28,6 +28,8 @@ info:
       <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
       <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
     ```
+    
+    **In your javascript script**
     ```
       var data_facility = "{{facility}}"
 
@@ -44,6 +46,7 @@ info:
 
       }
     ```
+
     **Example**
 
     ```
