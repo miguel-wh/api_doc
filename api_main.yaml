@@ -27,47 +27,6 @@ externalDocs:
   description: Find out how to create Github repo for your OpenAPI spec.
   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
-  - name: WEBSOCKET
-    description: Using WebSocket Requests with facility for get data.
-    x-code-samples:
-      - lang: Javascript
-        source: |
-          {% load static %}
-          <!DOCTYPE html>
-          <html>
-          <head>
-            <meta charset="utf-8">
-            <title></title>
-          </head>
-          <body>
-
-          </body>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-          <input id="WEBSOCKET_URI" type="hidden" value="{{ WEBSOCKET_URI }}">
-          <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.25bc7f1a8569.js"></script>
-          <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
-
-          <script type="text/javascript">
-
-          var data_facility = "{{facility}}"
-
-          task_adminolt_ajax(data_facility) // conexion websocket
-
-          function task_custom_done(data){
-
-              console.log(data) // return data
-
-              let task_result = $("#resultado-task");
-              task_result.html(data.mensaje);
-              $(".loading-gif, .jobstatic-panel").hide();
-              $("#content-loading-gif").hide();
-
-          }
-
-            
-          </script>
-          </html>
-
   - name: ONUs
     description: Everything about your ONUs
   - name: OLTs
@@ -77,10 +36,6 @@ tags:
   - name: Maps
     description: Everything about you Maps
 x-tagGroups:
-  - name: Using WebSocket Requests with facility
-    tags:
-      - WEBSOCKET
-
   - name: ONU
     tags:
       - ONUs
