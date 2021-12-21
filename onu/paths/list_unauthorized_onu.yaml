@@ -1,16 +1,13 @@
 tags:
 - ONUs
 summary: Get all unauthorized onu
-description: Get all unauthorized onu
+description: Get all unauthorized onu [#section/WebSocket](Example)
 operationId: getOnuAll
-requestBody:
 responses:
   '200':
     description: Successful Operation
     content:
       application/json:
-        parameters:
-          description: tesssssssssssssssssssssssssssssss
         schema:
           $ref: '#/components/schemas/OnuUnauthorizedResponse'
   '203':
