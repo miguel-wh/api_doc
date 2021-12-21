@@ -5,7 +5,7 @@ description: Get all unauthorized onu
 operationId: getOnuAll
 responses:
   '200':
-    summary: "xxxxxxxxxxx"
+    summary: For get data of unauthorized onu a websocket connection is required [#section/WebSocket](Click)
     description: Successful Operation
     content:
       application/json:
