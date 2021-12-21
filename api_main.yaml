@@ -10,6 +10,7 @@ info:
     For this sample, you can use the api key `special-key` to test the authorization filters.
     # Introduction
     This API is documented
+    # WebSocket
   version: 1.0.0
   title: Api AdminOLT
   termsOfService: 'https://adminolt.com/documentacion/terminos-y-condiciones-de-uso-5/'
