@@ -40,7 +40,7 @@ tags:
 x-tagGroups:
   - name: Using WebSocket Requests with facility
     tags:
-      - WebSocket
+      - WEBSOCKET
 
   - name: ONU
     tags:
