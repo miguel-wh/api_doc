@@ -87,7 +87,8 @@ info:
     ```
     ## Example 2
     In this case, it is free to use any websocket client.
-    taking into account the following data:
+    taking into account the following data.
+
     **1. URL WebSocket**
     ```
     wss://{{subdomain}}.adminolt.com/ws/
@@ -98,6 +99,12 @@ info:
     {
         "facility": "a474b7e8-1056-4e7d-9a71-54ec32e5152d"
     }
+    ```
+
+    **Example**
+    ```
+    // URL WebSocket
+    wss://{{subdomain}}.adminolt.com/ws/{{value_facility}}?subscribe-broadcast
     ```
 
   version: 1.0.0
