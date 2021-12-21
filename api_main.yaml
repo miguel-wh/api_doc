@@ -29,6 +29,8 @@ externalDocs:
 tags:
   - name: WEBSOCKET
     description: Using WebSocket Requests with facility for get data
+    content:
+      XXXXXXXX
   - name: ONUs
     description: Everything about your ONUs
   - name: OLTs
