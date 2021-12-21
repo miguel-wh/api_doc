@@ -28,9 +28,7 @@ externalDocs:
   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
   - name: WEBSOCKET
-    description: Using WebSocket Requests with facility for get data
-    content:
-      XXXXXXXX
+    description: Using WebSocket Requests with facility for get data.
   - name: ONUs
     description: Everything about your ONUs
   - name: OLTs
@@ -100,6 +98,11 @@ paths:
   /info-onu-authorized/run-status-onu/<int:id_onu>/:
     get:
       $ref: 'onu/paths/get_status_authorized_onu.yaml'
+
+  #WebSocket
+  /:
+    get:
+      $ref: 'websocket/requests_websocket.yaml'
 
 components:
   schemas:
