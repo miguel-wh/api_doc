@@ -3,12 +3,14 @@ tags:
 summary: Get all unauthorized onu
 description: Get all unauthorized onu
 operationId: getOnuAll
+requestBody:
 responses:
   '200':
-    summary: For get data of unauthorized onu a websocket connection is required [#section/WebSocket](Click)
     description: Successful Operation
     content:
       application/json:
+        parameters:
+          description: tesssssssssssssssssssssssssssssss
         schema:
           $ref: '#/components/schemas/OnuUnauthorizedResponse'
   '203':

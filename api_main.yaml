@@ -103,8 +103,7 @@ info:
 
     **Example**
     ```
-    // URL WebSocket
-    wss://{{subdomain}}.adminolt.com/ws/{{value_facility}}?subscribe-broadcast
+    wss://{{subdomain}}.adminolt.com/ws/{{value_facility}}?subscribe-broadcast ...
     ```
 
   version: 1.0.0
