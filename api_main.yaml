@@ -88,12 +88,13 @@ info:
     ## Example 2
     In this case, it is free to use any websocket client.
     taking into account the following data:
-    **URL WebSocket**
+    **1. URL WebSocket**
     ```
     wss://{{subdomain}}.adminolt.com/ws/
     ```
+
+    **2. Value of Key->facility**
     ```
-    **Value of Key->facility**
     {
         "facility": "a474b7e8-1056-4e7d-9a71-54ec32e5152d"
     }
