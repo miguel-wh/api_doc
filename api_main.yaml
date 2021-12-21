@@ -28,7 +28,7 @@ externalDocs:
   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
   - name: WEBSOCKET
-    description: Consumir response->facility para obtener data
+    description: Using WebSocket Requests with facility for get data
   - name: ONUs
     description: Everything about your ONUs
   - name: OLTs
