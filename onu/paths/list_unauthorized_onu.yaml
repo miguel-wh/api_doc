@@ -2,13 +2,12 @@ tags:
 - ONUs
 summary: Get all unauthorized onu
 description: Get all unauthorized onu
-
 operationId: getOnuAll
 responses:
   '200':
+    summary: "xxxxxxxxxxx"
     description: Successful Operation
     content:
-      description: TTTTTTTTTTTTTTTTTTTTTT
       application/json:
         schema:
           $ref: '#/components/schemas/OnuUnauthorizedResponse'
