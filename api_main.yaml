@@ -27,6 +27,8 @@ externalDocs:
   description: Find out how to create Github repo for your OpenAPI spec.
   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
+  - name: WEBSOCKET
+    description: Consumir response->facility para obtener data
   - name: ONUs
     description: Everything about your ONUs
   - name: OLTs
@@ -36,6 +38,10 @@ tags:
   - name: Maps
     description: Everything about you Maps
 x-tagGroups:
+  - name: Using WebSocket Requests with facility
+    tags:
+      - WebSocket
+
   - name: ONU
     tags:
       - ONUs
