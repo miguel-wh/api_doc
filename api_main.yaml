@@ -11,6 +11,13 @@ info:
     # Introduction
     This API is documented
     # WebSocket
+    For any endpoint that return facility:
+    ```
+      {
+        "facility": "a474b7e8-1056-4e7d-9a71-54ec32e5152d"
+      }
+    ```
+    
     ## Example 1
     ```
     <!DOCTYPE html>
