@@ -20,7 +20,32 @@ info:
     For get data is necessary a connection through websocket.
 
     ## Example 1
-    For this example, it is necessary to query the endpoint from the back-end, and send the key-> facility front-end
+    For this example, it is necessary to query the endpoint from the back-end, and send the key-> facility front-end (Client)
+    In javascript import the following libraries.
+    ```
+      <input id="WEBSOCKET_URI" type="hidden" value="wss://{{subdomain}}.adminolt.com/ws/">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
+      <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
+    ```
+    ```
+      var data_facility = "{{facility}}"
+
+      task_adminolt_ajax(data_facility) // Function for get data using connection to WebSocket
+
+      function task_custom_done(data){ // Return data
+
+          console.log(data) // data
+
+          let task_result = $("#resultado-task");
+          task_result.html(data.mensaje);
+          $(".loading-gif, .jobstatic-panel").hide();
+          $("#content-loading-gif").hide();
+
+      }
+    ```
+    **Example**
+
     ```
     <!DOCTYPE html>
       <html>
