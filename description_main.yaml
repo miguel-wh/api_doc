@@ -71,47 +71,49 @@ description: |
 
   **Full example Javascript**
   ```
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-      <div id="info" with="500" height="500"></div>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+    </head>
+    <body>
+        <div id="info" style="font-size: 20px; overflow: hidden; position: absolute; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+            
+        </div>
 
-  </body>
-  <input id="WEBSOCKET_URI" type="hidden" value="wss://{{your_subdomain}}.adminolt.com/ws/">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
-  <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
+    </body>
+    <input id="WEBSOCKET_URI" type="hidden" value="wss://soporte1.adminolt.com/ws/">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
+    <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
 
-  <script type="text/javascript">
+    <script type="text/javascript">
 
-  var key_facility = "{{facility}}" // key facility
+    var key_facility = "{{facility}}" // key facility
 
-  task_adminolt_ajax(key_facility) // call function task_adminolt_ajax and pass like argument: key_facility
+    task_adminolt_ajax(key_facility) // call function task_adminolt_ajax and pass like argument: key_facility
 
-  function task_custom_done(data){ 
+    function task_custom_done(data){ // return data
 
-      console.log(data) // return data
+        console.log(data)
 
-      let task_result = $("#resultado-task");
-      task_result.html(data.mensaje);
-      $(".loading-gif, .jobstatic-panel").hide();
-      $("#content-loading-gif").hide();
+        let task_result = $("#resultado-task");
+        task_result.html(data.mensaje);
+        $(".loading-gif, .jobstatic-panel").hide();
+        $("#content-loading-gif").hide();
 
-      const info = document.getElementById("info")
-      info.innerHTML = JSON.stringify(data); //print data
-  }
+        const info = document.getElementById("info")
+        info.innerHTML = JSON.stringify(data); // Example print response_data
+    }
 
-  </script>
-  </html>
+    </script>
+    </html>
   ```
 
   **Result data**
 
-  ![Baeldung](https://wisphub.net/media/uploadsCKEditor/miguelangel%40wisphub/2021/12/22/response_data.png)
+  ![Baeldung](https://wisphub.net/media/uploadsCKEditor/miguelangel%40wisphub/2021/12/22/response_data_KQgBnuV.png)
 
   ## Example 2
   In this case, it is free to use any websocket client.
