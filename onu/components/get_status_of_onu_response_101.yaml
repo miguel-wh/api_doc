@@ -12,3 +12,10 @@ properties:
       reference:
         type: string
         example: very_good
+
+  status:
+    type: string
+    example: DONE
+  task_id:
+    type: string
+    example: bd8f1813-4cac-453f-898f-54f814019361

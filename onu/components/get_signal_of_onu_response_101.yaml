@@ -15,3 +15,10 @@ properties:
       signal_1490:
         type: integer
         example: -17.4
+        
+  status:
+    type: string
+    example: DONE
+  task_id:
+    type: string
+    example: bd8f1813-4cac-453f-898f-54f8140d9661
