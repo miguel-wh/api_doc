@@ -1,12 +1,12 @@
 tags:
 - ONUs
 summary: Get all unauthorized onu
-description: If status == 200 To obtain data a websocket connection is required [example](#section/WebSocket)
 operationId: getOnuAll
 responses:
   '200':
     description: Successful Operation
     content:
+      description: XD
       application/json:
         schema:
           $ref: '#/components/schemas/OnuUnauthorizedResponse'
