@@ -14,7 +14,7 @@ description: |
   ```
   **How to get the data?**
 
-  ## Example1
+  ## Example 1
   
   **Step 1 - Get facility**
 
@@ -98,13 +98,13 @@ description: |
 
     function task_custom_done(data){ // return data
 
-        console.log(data)
 
         let task_result = $("#resultado-task");
         task_result.html(data.mensaje);
         $(".loading-gif, .jobstatic-panel").hide();
         $("#content-loading-gif").hide();
 
+        console.log(data)
         const info = document.getElementById("info")
         info.innerHTML = JSON.stringify(data); // Example print response_data
     }
