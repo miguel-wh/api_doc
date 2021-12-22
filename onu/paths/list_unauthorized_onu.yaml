@@ -5,6 +5,7 @@ operationId: getOnuAll
 responses:
   '200':
     description: Successful Operation
+    summary: XD
     content:
       application/json:
         schema:
