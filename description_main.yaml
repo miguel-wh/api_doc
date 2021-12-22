@@ -32,17 +32,17 @@ description: |
     return render(request, 'ws/ws.html', {"facility": facility})
 
   ```
-
-  **Response. Status code 200 **
+  
+  **Step 2 - Send "facility" to web browser**
+  Response. Status code 200
   ```
   {
     "facility": "a474b7e8-1056-4e7d-9a71-54ec32e5152d"
   }
   ```
 
-  **Step 2 - Send "facility" to web browser**
 
-  **Step 3 - Import the next files (libraries) **
+  **Step 3 - Import the next files (libraries)**
 
   ```
   <input id="WEBSOCKET_URI" type="hidden" value="wss://{{your_subdomain}}.adminolt.com/ws/">
@@ -51,13 +51,13 @@ description: |
   <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
   ```
 
-  **Step 4 - Make connection to the websocket **
+  **Step 4 - Make connection to the websocket**
   ```
   var key_facility = "{{facility}}"
   task_adminolt_ajax(key_facility)  // call function task_adminolt_ajax and pass like argument 
   ```
 
-  **Step 5 - Results **
+  **Step 5 - Results**
 
   ## Example 2
   In this case, it is free to use any websocket client.
