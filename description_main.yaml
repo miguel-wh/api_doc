@@ -14,6 +14,8 @@ description: |
   ```
   **How to get the data?**
 
+  ## Example1
+  
   **Step 1 - Get facility**
 
   It is recommended to consume API from the backend.
@@ -83,7 +85,7 @@ description: |
         </div>
 
     </body>
-    <input id="WEBSOCKET_URI" type="hidden" value="wss://soporte1.adminolt.com/ws/">
+    <input id="WEBSOCKET_URI" type="hidden" value="wss://{{your_subdomain}}.adminolt.com/ws/">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
     <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
