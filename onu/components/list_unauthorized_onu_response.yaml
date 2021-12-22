@@ -3,4 +3,4 @@ properties:
   facility:
     type: string
     example: a474b7e8-1056-4e7d-9a71-54ec32e5152d
-    description: Se requiere una conexion websocket para obtner un status 101, [ejemplo](#section/WebSocket)
+    description: A websocket connection is required to get a status code 101. [Example](#section/WebSocket)
