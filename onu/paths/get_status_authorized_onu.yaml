@@ -36,6 +36,13 @@ responses:
       application/json:
         example:
           detail: "Metodo {{put,post,delete}} no permitido"
+  '101':
+    description: Web Socket Protocol Handshake
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/StatusOnuAuthorizedResponse101'
+          
 x-code-samples:
   - lang: Python
     source: |

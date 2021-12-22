@@ -1,0 +1,14 @@
+type: object
+properties:
+  onu_run_status:
+    type: object
+    properties:
+      value:
+        type: string
+        example: 1
+      label:
+        type: string
+        example: Online
+      reference:
+        type: string
+        example: very_good

@@ -135,6 +135,10 @@ components:
       $ref: 'onu/components/get_signal_of_onu_response.yaml'
     GetStatusAuthorizedOnu:
       $ref: 'onu/components/get_status_authorized_onu_respose.yaml'
+    SignalOnuAuthorizedResponse101:
+      $ref: 'onu/components/get_signal_of_onu_response_101.yaml'
+    StatusOnuAuthorizedResponse101:
+      $ref: 'onu/components/get_status_of_onu_response_101.yaml'
   requestBodies:
     ZoneRequest:
       content:

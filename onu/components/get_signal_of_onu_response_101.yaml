@@ -1,0 +1,17 @@
+type: object
+properties:
+  onu_olt_rx_signal:
+    type: object
+    properties:
+      reference:
+        type: string
+        example: very-good
+      signals:
+        type: string
+        example: -17.4 / -17.06
+      signal_1310:
+        type: integer
+        example: -17.06
+      signal_1490:
+        type: integer
+        example: -17.4
