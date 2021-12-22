@@ -113,7 +113,9 @@ description: |
 
   **Result data**
 
-  ![Baeldung](https://wisphub.net/media/uploadsCKEditor/miguelangel%40wisphub/2021/12/22/response_data_KQgBnuV.png)
+  ![Baeldung](https://wisphub.net/media/uploadsCKEditor/miguelangel%40wisphub/2021/12/22/print_data.png)
+  ![Baeldung](https://wisphub.net/media/uploadsCKEditor/miguelangel%40wisphub/2021/12/22/console_data.png)
+  
 
   ## Example 2
   In this case, it is free to use any websocket client.
