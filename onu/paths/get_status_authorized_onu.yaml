@@ -1,7 +1,6 @@
 tags:
 - ONUs
 summary: Get status of authorized onu
-description: Get status of authorized onu trough of websocket with key-> facility
 operationId: getStatusOfuthorizedOnu
 parameters:
   - name: id_onu

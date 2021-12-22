@@ -1,7 +1,6 @@
 tags:
 - ONUs
 summary: Get signal of authorized onu
-description: Get signal of authorized onu trough of websocket with key-> facility
 operationId: getSignalOfuthorizedOnu
 parameters:
   - name: id_onu
