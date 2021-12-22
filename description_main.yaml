@@ -15,6 +15,7 @@ description: |
   **How to get the data?**
 
   **Step 1 - Get facility**
+
   It is recommended to consume API from the backend.
   This is an example with Python.
   ```
@@ -32,8 +33,9 @@ description: |
     return render(request, 'ws/ws.html', {"facility": facility})
 
   ```
-  
+
   **Step 2 - Send "facility" to web browser**
+
   Response. Status code 200
   ```
   {
@@ -44,20 +46,70 @@ description: |
 
   **Step 3 - Import the next files (libraries)**
 
+  In your Javascript
+
   ```
   <input id="WEBSOCKET_URI" type="hidden" value="wss://{{your_subdomain}}.adminolt.com/ws/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.25bc7f1a8569.js"></script>
+  <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
   <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
   ```
 
   **Step 4 - Make connection to the websocket**
+
+  In your Javascript
   ```
   var key_facility = "{{facility}}"
-  task_adminolt_ajax(key_facility)  // call function task_adminolt_ajax and pass like argument 
+  task_adminolt_ajax(key_facility)  // call function task_adminolt_ajax and pass like argument: key_facility
   ```
 
   **Step 5 - Results**
+  ```
+  const info = document.getElementById("info")
+  info.innerHTML = JSON.stringify(data); //print data
+  ```
+
+  **Full example Javascript**
+  ```
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <div id="info" with="500" height="500"></div>
+
+  </body>
+  <input id="WEBSOCKET_URI" type="hidden" value="wss://soporte1.adminolt.com/ws/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
+  <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
+
+  <script type="text/javascript">
+
+  var key_facility = "{{facility}}" // key facility
+
+  task_adminolt_ajax(key_facility) // call function task_adminolt_ajax and pass like argument: key_facility
+
+  function task_custom_done(data){ 
+
+      console.log(data) // return data
+
+      let task_result = $("#resultado-task");
+      task_result.html(data.mensaje);
+      $(".loading-gif, .jobstatic-panel").hide();
+      $("#content-loading-gif").hide();
+
+      const info = document.getElementById("info")
+      info.innerHTML = JSON.stringify(data); //print data
+  }
+
+  </script>
+  </html>
+  ```
+
+  **Result data**
 
   ## Example 2
   In this case, it is free to use any websocket client.
