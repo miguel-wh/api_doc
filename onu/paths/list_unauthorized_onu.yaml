@@ -6,7 +6,6 @@ responses:
   '200':
     description: Successful Operation
     content:
-      description: XD
       application/json:
         schema:
           $ref: '#/components/schemas/OnuUnauthorizedResponse'
