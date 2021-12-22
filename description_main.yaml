@@ -81,7 +81,7 @@ description: |
       <div id="info" with="500" height="500"></div>
 
   </body>
-  <input id="WEBSOCKET_URI" type="hidden" value="wss://soporte1.adminolt.com/ws/">
+  <input id="WEBSOCKET_URI" type="hidden" value="wss://{{your_subdomain}}.adminolt.com/ws/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
   <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
@@ -110,6 +110,8 @@ description: |
   ```
 
   **Result data**
+
+  ![Baeldung](https://wisphub.net/media/uploadsCKEditor/miguelangel%40wisphub/2021/12/22/response_data.png)
 
   ## Example 2
   In this case, it is free to use any websocket client.
