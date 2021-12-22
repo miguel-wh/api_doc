@@ -1,0 +1,101 @@
+description: |
+    This is a sample server Petstore server.
+    You can find out more about Swagger at
+    [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).
+    For this sample, you can use the api key `special-key` to test the authorization filters.
+    # Introduction
+    This API is documented
+    # WebSocket
+    For any endpoint that return facility:
+    ```
+      {
+        "facility": "a474b7e8-1056-4e7d-9a71-54ec32e5152d"
+      }
+    ```
+    For get data is necessary a connection through websocket.
+
+    ## Example 1
+    For this example, it is necessary to query the endpoint from the back-end, and send the key-> facility front-end (Client)
+    In javascript import the following libraries.
+    ```
+      <input id="WEBSOCKET_URI" type="hidden" value="wss://{{subdomain}}.adminolt.com/ws/"> <!-- replace your subdomain -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
+      <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
+    ```
+
+    **In your javascript script**
+    ```
+      var data_facility = "{{facility}}"
+
+      task_adminolt_ajax(data_facility) // Function for get data using connection to WebSocket
+
+      function task_custom_done(data){ // Return data
+
+          console.log(data) // data
+
+          let task_result = $("#resultado-task");
+          task_result.html(data.mensaje);
+          $(".loading-gif, .jobstatic-panel").hide();
+          $("#content-loading-gif").hide();
+
+      }
+    ```
+
+    **Example**
+
+    ```
+    <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title></title>
+      </head>
+      <body>
+
+      </body>
+      <input id="WEBSOCKET_URI" type="hidden" value="wss://{{subdomain}}.adminolt.com/ws/"> <!-- replace your subdomain -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script type="text/javascript" src="https://adminolt.com/static/js/ws4redis.js"></script>
+      <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
+
+      <script type="text/javascript">
+
+      var data_facility = "{{facility}}"
+
+      task_adminolt_ajax(data_facility) // Function for get data using connection to WebSocket
+
+      function task_custom_done(data){ // Return data
+
+          console.log(data) // data
+
+          let task_result = $("#resultado-task");
+          task_result.html(data.mensaje);
+          $(".loading-gif, .jobstatic-panel").hide();
+          $("#content-loading-gif").hide();
+
+      }
+
+        
+      </script>
+      </html>
+    ```
+    ## Example 2
+    In this case, it is free to use any websocket client.
+    taking into account the following data.
+
+    **1. URL WebSocket**
+    ```
+    wss://{{subdomain}}.adminolt.com/ws/
+    ```
+
+    **2. Value of Key->facility**
+    ```
+    {
+        "facility": "a474b7e8-1056-4e7d-9a71-54ec32e5152d"
+    }
+    ```
+
+    **Example**
+    ```
+    wss://{{subdomain}}.adminolt.com/ws/{{value_facility}}?subscribe-broadcast ...
