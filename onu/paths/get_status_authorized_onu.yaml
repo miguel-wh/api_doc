@@ -23,7 +23,21 @@ responses:
     content:
       application/json:
         example:
-          message_status: "El token enviado no es valido"      
+          message_status: "El token enviado no es valido" 
+
+  '400': 
+    description: Bad Request
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            facility:
+              example: null
+            description:
+              type: string
+              example: "ONU don't exists"
+
   '401':
     description: Unauthorized
     content:
