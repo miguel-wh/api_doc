@@ -29,7 +29,6 @@ responses:
           detail: "Metodo {{put,post,delete}} no permitido"
   '101':
     description: Web Socket Protocol Handshake
-    operationId: responsecode101
     content:
       application/json:
         schema:
