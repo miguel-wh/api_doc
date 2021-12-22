@@ -5,7 +5,7 @@ properties:
     properties:
       value:
         type: string
-        example: 1
+        example: "1"
       label:
         type: string
         example: Online
