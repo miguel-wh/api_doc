@@ -60,7 +60,8 @@ description: |
   ```
   <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
   ```
-  It makes the connection to the websocket to obtain data, receive as an argument: facility
+  It makes the connection to the websocket to obtain data.
+  Receive as an argument: facility
   ```
   <script>
     task_adminolt_ajax(key_facility)
@@ -68,8 +69,6 @@ description: |
   ```
 
   **Step 5 - Results**
-
-  Once data is obtained, you can make use of it
 
   Once the connection to the websocket was successful and the status is "DONE"
   You can use data inside the function.
@@ -83,7 +82,7 @@ description: |
     function task_custom_done(data){
 
       // Remove the loader component when returning data.
-      $(".loading-gif, .jobstatic-panel").hide(); // Closed
+      $(".loading-gif, .jobstatic-panel").hide();
       $("#content-loading-gif").hide();
 
       // response data
@@ -93,7 +92,7 @@ description: |
   ```
 
 
-  **Full example Javascript**
+  **Full example**
   ```
     <!DOCTYPE html>
     <html>
@@ -119,21 +118,24 @@ description: |
 
     // The function "task_adminolt_ajax()" is defined in the file:
     // <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
-    // It makes the connection to the websocket to obtain data and and receives as an argument: facility
+    // It makes the connection to the websocket to obtain data.
+    // Receive as an argument: facility
     task_adminolt_ajax(key_facility)
 
 
+
+    //Once the connection to the websocket was successful and the status is "DONE"
+    //You can use data inside the function. Passing data as argument
     function task_custom_done(data){
-      //If the connection to the websocket was successful, return data within this function.
 
-        //Remove the loader component when returning data.
-        $(".loading-gif, .jobstatic-panel").hide(); // Closed
-        $("#content-loading-gif").hide();
+      // Remove the loader component when returning data.
+      $(".loading-gif, .jobstatic-panel").hide();
+      $("#content-loading-gif").hide();
 
-        Once data is obtained, you can make use of it
-        console.log(data)
-        const info = document.getElementById("info")
-        info.innerHTML = JSON.stringify(data); // Example print response_data
+      // response data
+      console.log(data)
+      const info = document.getElementById("info")
+      info.innerHTML = JSON.stringify(data);
     }
 
     </script>
