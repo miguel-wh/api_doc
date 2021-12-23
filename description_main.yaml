@@ -101,7 +101,6 @@ description: |
 
     var key_facility = "{{facility}}" // facility
 
-
     // The function "task_adminolt_ajax()" is defined in the file:
     // <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
     // It makes the connection to the websocket to obtain data and and receives as an argument: facility
