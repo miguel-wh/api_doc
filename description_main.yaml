@@ -177,6 +177,7 @@ description: |
 
   **Step 2**
 
+
   Open a websocket connection to process the information and return data in the browser.
   You can use any websocket client.  
   Taking the next.
