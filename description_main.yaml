@@ -75,8 +75,6 @@ description: |
   ```function task_custom_done(data){}```
   Passing data as argument
   
-  ```function task_custom_done(data){}```
-
   **Example**
   ```
   <script>
