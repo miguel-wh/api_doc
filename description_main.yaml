@@ -71,21 +71,22 @@ description: |
 
   Once data is obtained, you can make use of it
 
-  If the connection to the websocket was successful and status == "DONE", return data within this function.
+  If the connection to the websocket was successful and status == "DONE", return data within this function,
+  receiving data as argument
   ```function task_custom_done(data){}```
 
   **Example**
   ```
   <script>
-  function task_custom_done(data){
+    function task_custom_done(data){
 
-    // Remove the loader component when returning data.
-    $(".loading-gif, .jobstatic-panel").hide(); // Closed
-    $("#content-loading-gif").hide();
+      // Remove the loader component when returning data.
+      $(".loading-gif, .jobstatic-panel").hide(); // Closed
+      $("#content-loading-gif").hide();
 
-    // response data
-    console.log(data)
-  }
+      // response data
+      console.log(data)
+    }
   </script>
   ```
 
