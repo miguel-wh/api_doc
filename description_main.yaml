@@ -71,8 +71,10 @@ description: |
 
   Once data is obtained, you can make use of it
 
-  If the connection to the websocket was successful and status == "DONE", return data within this function,
-  receiving data as argument
+  Once the connection to the websocket was successful and the status is "DONE"
+  You can use data inside the function.
+
+  Passing data as argument
   ```function task_custom_done(data){}```
 
   **Example**
