@@ -55,7 +55,6 @@ description: |
 
   **Step 4 - Make connection to the websocket**
 
-  In your Javascript
   The function "task_adminolt_ajax()" is defined in the file:
   ```
   <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
@@ -70,10 +69,12 @@ description: |
 
   **Step 5 - Results**
 
-  Once the connection to the websocket was successful and the status is "DONE"
-  You can use data inside the function.
+  Once the connection to the websocket was successful and the status is "DONE".
+  You can use data inside the function. 
 
+  ```function task_custom_done(data){}```
   Passing data as argument
+  
   ```function task_custom_done(data){}```
 
   **Example**
