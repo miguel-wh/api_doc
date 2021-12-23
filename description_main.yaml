@@ -55,12 +55,16 @@ description: |
 
   **Step 4 - Make connection to the websocket**
 
-  The function "task_adminolt_ajax()" is defined in the file:
-  ```
-  <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
-  ```
-  It makes the connection to the websocket to obtain data.
-  Receive as an argument: facility
+  To make the connection through websocket and obtain data, call the following function.
+
+  ```task_adminolt_ajax(facility)```
+  Receive as argument: facility
+
+
+  This function is defined in the file.
+  ```<script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>```
+  
+  **Example**
   ```
   <script>
     task_adminolt_ajax(key_facility)
