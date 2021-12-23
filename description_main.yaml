@@ -18,8 +18,8 @@ description: |
   
   **Step 1 - Get facility**
 
-  It is recommended to consume API from the backend.
-  This is an example with Python.
+  Consume API in any language programmation. 
+  This is a example with Python-Django.
   ```
   def get_api_example(request):
     endpoint = "https://{{your_subdomain}}.adminolt.com/api/onu/unauthorized/"
@@ -30,7 +30,7 @@ description: |
     }
     response = requests.get(url=endpoint, headers=headers)
     data = response.json()
-    facility = data.get('facility') # Step 2 - Send variable to web browser
+    facility = data.get('facility') # Send facility to web browser
 
     return render(request, 'ws/ws.html', {"facility": facility})
 
@@ -153,9 +153,37 @@ description: |
 
   ## Example 2
 
-  **Request Method: GET**
+  **Step 1**
+  - Consume API in any language programmation.
+  - Get facility from request
 
-  **Request URL WebSocket:**
+  This is a example with Python-Django
   ```
-    wss://{{your_subdomain}}.adminolt.com/ws/{{facility}}?subscribe-broadcast
+  def get_api_example(request):
+    endpoint = "https://{{your_subdomain}}.adminolt.com/api/onu/unauthorized/"
+    token = "{{your_token}}"
+
+    headers = {
+        "Authorization": "Token {0}".format(token)
+    }
+    response = requests.get(url=endpoint, headers=headers)
+    data = response.json()
+    facility = data.get('facility') // get facility for open a websocket connection.
+
+    return render(request, 'ws/ws.html', {"facility": facility})
+
   ```
+
+  **Step 2**
+  Open a websocket connection to process the information and return data in the browser.
+  You can use any websocket client.  
+  Taking the next.
+
+  - facility
+
+  - Request Method: GET
+
+  - Request URL WebSocket:
+    ```
+      wss://{{your_subdomain}}.adminolt.com/ws/{{facility}}?subscribe-broadcast
+    ```
