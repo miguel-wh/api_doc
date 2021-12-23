@@ -3,4 +3,4 @@ properties:
   facility:
     type: string
     example: 72fccaea-26b3-4156-9e01-dd69d370c39b
-    description: Returns a UUID of the process, to obtain data it is necessary to connect through a WebSocket through the UUID. Example. [Example](#section/WebSocket)
+    description: Returns a UUID of the process, to obtain data it is necessary to connect through a WebSocket through the UUID. [Example](#section/WebSocket)
