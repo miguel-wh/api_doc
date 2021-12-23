@@ -56,13 +56,13 @@ description: |
   **Step 4 - Make connection to the websocket**
 
   In your Javascript
+  The function "task_adminolt_ajax()" is defined in the file:
+  ```
+  <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
+  ```
+  It makes the connection to the websocket to obtain data, receive as an argument: facility
   ```
   <script>
-    var key_facility = "{{facility}}"
-
-    // The function "task_adminolt_ajax()" is defined in the file:
-    // <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
-    // It makes the connection to the websocket to obtain data and and receives as an argument: facility
     task_adminolt_ajax(key_facility)
   </script>
   ```
@@ -70,12 +70,25 @@ description: |
   **Step 5 - Results**
 
   Once data is obtained, you can make use of it
+
+  If the connection to the websocket was successful and status == "DONE", return data within this function.
+  ```function task_custom_done(data){}```
+
+  **Example**
   ```
   <script>
-    const info = document.getElementById("info")
-    info.innerHTML = JSON.stringify(data); //print data
+  function task_custom_done(data){
+
+    // Remove the loader component when returning data.
+    $(".loading-gif, .jobstatic-panel").hide(); // Closed
+    $("#content-loading-gif").hide();
+
+    // response data
+    console.log(data)
+  }
   </script>
   ```
+
 
   **Full example Javascript**
   ```
