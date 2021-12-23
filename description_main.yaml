@@ -62,7 +62,8 @@ description: |
 
 
   This function is defined in the file.
-  
+
+
   ```<script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>```
   
   **Example**
@@ -120,11 +121,9 @@ description: |
 
     var key_facility = "{{facility}}" // facility
 
-    // The function "task_adminolt_ajax()" is defined in the file:
-    // <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
-    // It makes the connection to the websocket to obtain data.
-    // Receive as an argument: facility
-    task_adminolt_ajax(key_facility)
+    // To make the connection through websocket and obtain data, call the following function. 
+    // Receive as argument: facility
+    task_adminolt_ajax(key_facility)  //This function is defined in the file. <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
 
 
 
