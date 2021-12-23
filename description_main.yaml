@@ -23,6 +23,9 @@ description: |
 
   This is a example with Python-Django
   ```
+  from django.shortcuts import render
+  import requests
+  
   def get_api_example(request):
     endpoint = "https://{{your_subdomain}}.adminolt.com/api/onu/unauthorized/"
     token = "{{your_token}}"
@@ -162,6 +165,9 @@ description: |
 
   This is a example with Python-Django
   ```
+  from django.shortcuts import render
+  import requests
+  
   def get_api_example(request):
     endpoint = "https://{{your_subdomain}}.adminolt.com/api/onu/unauthorized/"
     token = "{{your_token}}"
