@@ -16,10 +16,12 @@ description: |
 
   ## Example 1
   
-  **Step 1 - Get facility**
+  **Step 1**
 
-  Consume API in any language programmation. 
-  This is a example with Python-Django.
+  - Consume API in any language programmation.
+  - Get facility from request
+
+  This is a example with Python-Django
   ```
   def get_api_example(request):
     endpoint = "https://{{your_subdomain}}.adminolt.com/api/onu/unauthorized/"
