@@ -240,3 +240,6 @@ description: |
   if __name__ == "__main__":
     requests_api()
   ```
+  
+  ### Result data
+  ![Baeldung](https://wisphub.net/media/uploadsCKEditor/miguelangel%40wisphub/2021/12/27/example2.png)
