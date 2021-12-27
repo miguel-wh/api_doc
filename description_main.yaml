@@ -158,43 +158,85 @@ description: |
 
   ## Example 2
 
-  **Step 1**
+  To obtain data, first it is necessary to make the request to the endpoint-
+  You can use the programming language of your choice.
 
-  - Consume API in any language programmation.
-  - Get facility from request
+  If the endpoint returns facility, you need to open a WebSocket connection using facility.
+  You can use any WebSocket client of your choice
 
-  This is a example with Python-Django
   ```
-  from django.shortcuts import render
-  import requests
-  
-  def get_api_example(request):
-    endpoint = "https://{{your_subdomain}}.adminolt.com/api/onu/unauthorized/"
-    token = "{{your_token}}"
+      Request URL WebSocket:
+      wss://{{your_subdomain}}.adminolt.com/ws/{{facility}}?subscribe-broadcast
+  ```
+
+
+  ### This is a example with Python
+
+  ```
+  import json
+  import time
+  import requests # python -m pip install requests
+  import websocket # pip3 install websocket-client
+
+
+  def connection_websocket(facility):
+    """
+    param: facility -> UUID Endpoint process, it is used to open a WebSocket connection to obtain data
+    
+    return data. Example.
+    {'unauthorized_onus': {'485754431B2CA496': {'interface': '0/11/0', 'chasis': '0', 'slot': '11', 'port': '0', 'olt': 'Huawei MA5680T', 'onu_type': '546M', 'olt_id': 4, 'class_type': 'Huawei', 'onu_type_id': 17, 'onu_type_mode': 'Bridging/Routing', 'interface_id': '4194394112', 'sn': '485754431B2CA496'}}, 'status': 'DONE', 'task_id': '0ff59c3a-8500-4aa8-909c-e5fe7a144035'}
+    """
+
+    # Request URL WebSocket:
+    URL_WEBSOCKET = "wss://soporte1.adminolt.com/ws/{facility}?subscribe-broadcast".format(facility=facility)
+
+    websocket.enableTrace(True)
+    ws = websocket.create_connection(URL_WEBSOCKET)
+    print("Sending...")
+    ws.send("Get response_data")
+    print("Sent")
+    print("Receiving...")
+    result = ws.recv()
+    ws.close()
+
+    data = json.loads(result)
+    return data
+
+
+  def requests_api():
+    """
+    Response data is obtained, first making a request to an endpoint, obtaining facility
+    then open a WebSocket connection using facility to obtain data.
+    """
+    
+    # Step 1. Request endpoint
+    endpoint = "https://soporte1.adminolt.com/api/onu/unauthorized/"
+    token = "e7a38dd887a6353dc637eb54045a2c5846cb2b4d"
 
     headers = {
         "Authorization": "Token {0}".format(token)
     }
+
     response = requests.get(url=endpoint, headers=headers)
-    data = response.json()
-    facility = data.get('facility') // get facility for open a websocket connection.
 
-    return render(request, 'ws/ws.html', {"facility": facility})
+    
+    # Step 2. Get facility
+    result = response.json()
+    facility = result.get('facility') # facility -> UUID
 
+
+    # Step 3 - Connection to WebSocket
+    while(True):
+        # If status == 'PROGRESS', the connection is retried. And returns data if status == 'DONE'
+
+        time.sleep(1)
+        data = connection_websocket(facility) # Connection to WebSocket
+        status = data.get('status')
+        if status == 'DONE': # Success
+            print(data) # Response data. 
+            break
+
+  # MAIN
+  if __name__ == "__main__":
+    requests_api()
   ```
-
-  **Step 2**
-
-
-  Open a websocket connection to process the information and return data in the browser.
-  You can use any websocket client.  
-  Taking the next.
-
-  - facility
-
-  - Request Method: GET
-
-  - Request URL WebSocket:
-    ```
-      wss://{{your_subdomain}}.adminolt.com/ws/{{facility}}?subscribe-broadcast
-    ```
