@@ -156,9 +156,9 @@ description: |
   ![Baeldung](https://wisphub.net/media/uploadsCKEditor/miguelangel%40wisphub/2021/12/22/console_data.png)
   
 
-  ## Example 2
+  ## Example 2.
 
-  To obtain data, first it is necessary to make the request to the endpoint-
+  To obtain data, first it is necessary to make the request to the endpoint.
   You can use the programming language of your choice.
 
   If the endpoint returns facility, you need to open a WebSocket connection using facility.
@@ -188,7 +188,7 @@ description: |
     """
 
     # Request URL WebSocket:
-    URL_WEBSOCKET = "wss://soporte1.adminolt.com/ws/{facility}?subscribe-broadcast".format(facility=facility)
+    URL_WEBSOCKET = "wss://{{your_subdomain}}.adminolt.com/ws/{facility}?subscribe-broadcast".format(facility=facility)
 
     websocket.enableTrace(True)
     ws = websocket.create_connection(URL_WEBSOCKET)
@@ -210,8 +210,8 @@ description: |
     """
     
     # Step 1. Request endpoint
-    endpoint = "https://soporte1.adminolt.com/api/onu/unauthorized/"
-    token = "e7a38dd887a6353dc637eb54045a2c5846cb2b4d"
+    endpoint = "https://{{your_subdomain}}.adminolt.com/api/onu/unauthorized/"
+    token = "{{your_token}}"
 
     headers = {
         "Authorization": "Token {0}".format(token)
