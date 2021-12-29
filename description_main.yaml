@@ -128,7 +128,7 @@ description: |
 
     // To make the connection through websocket and obtain data, call the following function. 
     // Receive as argument: facility
-    task_adminolt_ajax(key_facility)  //This function is defined in the file. <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"></script>
+    task_adminolt_ajax(key_facility)  //This function is defined in the file. <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"><script>
 
 
 
