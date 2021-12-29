@@ -90,6 +90,9 @@ paths:
   /info-onu-authorized/run-status-onu/<int:id_onu>/:
     get:
       $ref: 'onu/paths/get_status_authorized_onu.yaml'
+  /onu/get-data-to-authorize/<int:id_onu>/:
+    get:
+      $ref: 
 
 components:
   schemas:
