@@ -1,6 +1,7 @@
 tags:
 - OLTs
-summary: Gets a list of OLT VLANs by OLT ID
+summary: Get VLANs list
+description: Gets a list of OLT VLANs by OLT ID
 operationId: getVlansList
 responses:
   '101':
@@ -32,7 +33,6 @@ responses:
             task_id:
               type: string
               example: b1e76e79-7569-4951-bf1b-0fea21ac4dee
-          #$ref: '##/components/schemas/VlansListResponse101'
   '200':
     description: Successful Operation
     content:
@@ -44,7 +44,6 @@ responses:
               type: string
               example: 72fccaea-26b3-4156-9e01-dd69d370c39b
               description: Returns a UUID of the process, to obtain data it is necessary to connect through a WebSocket through the UUID. [Example](#section/WebSocket)
-                    #$ref: '#/components/schemas/VlansListResponse200'
   '203':
     description: Non-Authoritative Information
     content:
