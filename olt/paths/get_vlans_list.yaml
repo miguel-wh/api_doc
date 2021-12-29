@@ -9,33 +9,8 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            vlans:
-              type: array
-              items:
-                $ref: '#/components/schemas/VlansListResponse101'
-                
-                example:                     #  |
-                  - type: Balance            #  |
-                    label: Current           #  |
-                    visible: true            #  |
-                    primary: false           #  |
-                  - type: AvailableBalance   #  |
-                    label: Available         #  |
-                    visible: true            #  |
-                    primary: true
-
-              
-
-              
+          $ref: '#/components/schemas/VlansListResponse101'
             
-            status:
-              type: string
-              example: DONE
-            task_id:
-              type: string
-              example: b1e76e79-7569-4951-bf1b-0fea21ac4dee
   '200':
     description: Successful Operation
     content:
