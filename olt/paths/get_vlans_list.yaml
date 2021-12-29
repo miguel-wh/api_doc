@@ -25,6 +25,9 @@ responses:
                   onus_system:
                     type: integer
                     example: 0
+
+                $ref: '#/components/schemas/VlansListResponse101'
+
               
             
             status:

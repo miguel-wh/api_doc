@@ -1,0 +1,11 @@
+type: object
+properties:
+  id:
+    type: string
+    example: 1
+  description:
+    type: string
+    example: "vlan1"
+  onus_system:
+    type: integer
+    example: 0

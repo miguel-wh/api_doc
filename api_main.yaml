@@ -125,8 +125,9 @@ components:
       $ref: 'olt/components/olt_request.yaml'
     OLTResponse:
       $ref: 'olt/components/olt_response.yaml'
-    
-    
+    VlansListResponse101:
+      $ref: 'olt/components/get_vlans_response_101.yaml'
+
     # ONUs
     OnuUnauthorizedRequest:
       $ref: 'onu/components/list_unauthorized_onu_request.yaml'
