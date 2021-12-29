@@ -90,9 +90,9 @@ paths:
   /info-onu-authorized/run-status-onu/<int:id_onu>/:
     get:
       $ref: 'onu/paths/get_status_authorized_onu.yaml'
-  /onu/get-data-to-authorize/<int:id_onu>/:
+  /onu-types/:
     get:
-      $ref: 
+      $ref: 'onu/paths/get_onu_types_list.yaml'
 
 components:
   schemas:
@@ -148,6 +148,8 @@ components:
       $ref: 'onu/components/get_signal_of_onu_response_101.yaml'
     StatusOnuAuthorizedResponse101:
       $ref: 'onu/components/get_status_of_onu_response_101.yaml'
+    OnuTypesResponse:
+      $ref: 'onu/components/get_onu_types_list_response.yaml'
   requestBodies:
     ZoneRequest:
       content:

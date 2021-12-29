@@ -1,0 +1,16 @@
+type: array
+items:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    onu_type:
+      type: string
+      example: HG8010H
+    capability_type:
+      type: string
+      example: Bridging
+    image:
+      type: string
+      example: http://{{subdominio}}.bitolmiguelangel.com/media/empresa/onu/hg8010h.png
