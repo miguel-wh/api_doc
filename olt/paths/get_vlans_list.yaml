@@ -1,0 +1,75 @@
+tags:
+- OLTs
+summary: Gets a list of OLT VLANs by OLT ID
+operationId: getVlansList
+responses:
+  '101':
+    description: Web Socket Protocol Handshake
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            vlans:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 1
+                  description:
+                    type: string
+                    example: "vlan1"
+                  onus_system:
+                    type: integer
+                    example: 0
+              
+            
+            status:
+              type: string
+              example: DONE
+            task_id:
+              type: string
+              example: b1e76e79-7569-4951-bf1b-0fea21ac4dee
+          #$ref: '##/components/schemas/VlansListResponse101'
+  '200':
+    description: Successful Operation
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            facility:
+              type: string
+              example: 72fccaea-26b3-4156-9e01-dd69d370c39b
+              description: Returns a UUID of the process, to obtain data it is necessary to connect through a WebSocket through the UUID. [Example](#section/WebSocket)
+                    #$ref: '#/components/schemas/VlansListResponse200'
+  '203':
+    description: Non-Authoritative Information
+    content:
+      application/json:
+        example:
+          message_status: "El token enviado no es valido"      
+  '401':
+    description: Unauthorized
+    content:
+      application/json:
+        example:
+          detail: "Las credenciales de autenticación no se proveyeron."
+  '405':
+    description: Method Not Allowed
+    content:
+      application/json:
+        example:
+          detail: "Metodo {{put,post,delete}} no permitido"
+x-code-samples:
+  - lang: Python
+    source: |
+      import requests
+      endpoint = "https://{{subdomain}}.adminolt.com/api/vlans/<int:olt_id>/"
+      headers = {
+          "Authorization": "Token {{token}}" 
+      }
+      response = requests.get(url=endpoint, headers=headers)
+      print(response.content)
