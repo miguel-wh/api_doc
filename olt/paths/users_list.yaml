@@ -1,0 +1,21 @@
+tags:
+- OLTs
+summary: Users test
+description: test
+operationId: getTestUser
+responses:
+  '200':
+    description: A user object.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/User'   # Reference to an object
+          examples:
+            Jessica:
+              value:
+                id: 10
+                name: Jessica Smith
+            Ron:
+              value:
+                id: 20
+                name: Ron Stewart

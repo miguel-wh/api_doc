@@ -76,6 +76,9 @@ paths:
   /vlans/<int:olt_id>/:
     get:
       $ref: 'olt/paths/get_vlans_list.yaml'
+  /example-users/:
+    get:
+      $ref: 'olt/paths/users_list.yaml'
 
   # All about ONUs
   /onu/unauthorized/:
@@ -130,6 +133,17 @@ components:
       $ref: 'olt/components/olt_response.yaml'
     VlansListResponse101:
       $ref: 'olt/components/get_vlans_response_101.yaml'
+    User:    # Schema name
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 1          # Property example
+        name:
+          type: string
+          example: New order  # Property example
+      
 
     # ONUs
     OnuUnauthorizedRequest:
