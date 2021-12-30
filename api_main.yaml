@@ -105,6 +105,7 @@ paths:
       $ref: 'olt/paths/users_list.yaml'
 
   # All about ONUs
+  # GET
   /onu/unauthorized/:
     get:
       $ref: 'onu/paths/list_unauthorized_onu.yaml'
@@ -120,6 +121,10 @@ paths:
   /onu-types/:
     get:
       $ref: 'onu/paths/get_onu_types_list.yaml'
+  # POST
+  /onu/authorize/:
+    $ref: 'onu/paths/post_onu_authorize.yaml'
+
 
 
 ### DEFINITION - RESPONSE OF ENDPOINT ###
