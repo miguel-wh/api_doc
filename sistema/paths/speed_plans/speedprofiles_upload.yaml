@@ -2,7 +2,7 @@ tags:
 - Speed Plans
 summary: Get speed profile upload list
 description: Gets a list of all speed profiles upload
-operationId: getSpeedProfileDownload
+operationId: getSpeedProfileUpload
 
 responses:
   '200':
