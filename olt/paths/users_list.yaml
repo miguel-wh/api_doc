@@ -10,12 +10,3 @@ responses:
       application/json:
         schema:
           $ref: '#/components/schemas/User'   # Reference to an object
-        examples:
-          Jessica:
-            value:
-              id: 10
-              name: Jessica Smith
-          Ron:
-            value:
-              id: 20
-              name: Ron Stewart
