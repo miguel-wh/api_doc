@@ -8,6 +8,6 @@ items:
       type: string
 example:
   - id: 1
-    name: 100 MEGA
+    name: 100 MEGAS
   - id: 2
     name: VOIP 10M
