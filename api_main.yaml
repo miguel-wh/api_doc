@@ -33,6 +33,7 @@ tags:
   - name: Maps
     description: Everything about you Maps
   - name: NAP
+  - name: Speed Plans
 x-tagGroups:
   - name: ONU
     tags:
@@ -47,6 +48,7 @@ x-tagGroups:
       - Zones
       - Maps
       - NAP
+      - Speed Plans
 
 ### URLS - ENDPOINTS ####
 paths:
@@ -79,6 +81,14 @@ paths:
   /naps/:
     get:
       $ref: 'sistema/paths/nap/get_naps_list.yaml'
+
+  # Speed Plans
+  /speedprofiles/download/:
+    get:
+      $ref: 'sistema/paths/speed_plans/speedprofiles_download.yaml'
+  /speedprofiles/upload/:
+    get:
+      $ref: 'sistema/paths/speed_plans/speedprofiles_upload.yaml'
 
   # All about OLTs
   /olt-list/:
@@ -146,6 +156,11 @@ components:
     # NAP
     GetNapsList:
       $ref: 'sistema/components/nap/get_naps_list_response.yaml'
+    # Speed Plans
+    GetSpeedProfileDownloadResponse:
+      $ref: 'sistema/components/speed_plans/speedprofiles_download_response.yaml'
+    GetSpeedProfileUploadResponse:
+      $ref: 'sistema/components/speed_plans/speedprofiles_upload_response.yaml'
 
     #OLTs
     OLTRequest:

@@ -1,16 +1,16 @@
 tags:
-- NAP
-summary: Get NAPs list
-description: Gets a list of NAPs
-operationId: getNapList
+- Speed Plans
+summary: Get speed profile upload list
+description: Gets a list of all speed profiles upload
+operationId: getSpeedProfileDownload
 
-responses:   
+responses:
   '200':
     description: Successful Operation
     content:
       application/json:
         schema:
-          $ref: '#/components/schemas/GetNapsList'
+          $ref: '#/components/schemas/GetSpeedProfileUploadResponse'
   '203':
     description: Non-Authoritative Information
     content:
@@ -33,7 +33,7 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/naps/"
+      endpoint = "https://{{subdomain}}.adminolt.com/api/speedprofiles/upload/"
       headers = {
           "Authorization": "Token {{token}}" 
       }
