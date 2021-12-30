@@ -4,7 +4,10 @@ items:
   properties:
     id:
       type: integer
-      example: 1
     name:
       type: string
-      example: 25 MEGAS
+example:
+  - id: 3:
+    name: 100 MEGAS
+  - id: 4:
+    name: 25 MEGAS

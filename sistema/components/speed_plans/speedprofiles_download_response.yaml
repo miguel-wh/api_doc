@@ -4,7 +4,10 @@ items:
   properties:
     id:
       type: integer
-      example: 1
     name:
       type: string
-      example: 100 MEGAS
+example:
+  - id: 1
+    name: 100 MEGA
+  - id: 2
+    name: VOIP 10M
