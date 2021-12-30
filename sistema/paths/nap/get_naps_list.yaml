@@ -11,8 +11,7 @@ responses:
       application/json:
         schema:
           anyOf:
-            - $ref: '#/components/schemas/GetNapsList1'
-            - $ref: '#/components/schemas/GetNapsList2'
+            - $ref: '#/components/schemas/GetNapsList'
   '203':
     description: Non-Authoritative Information
     content:

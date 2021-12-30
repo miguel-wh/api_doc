@@ -144,24 +144,8 @@ components:
     GetListMarkersMapByIdResponse:
       $ref: 'sistema/components/maps/get_list_of_markers_of_map_by_id_response.yaml'
     # NAP
-    GetNapsList1:
-      type: object
-      properties:
-        id:
-          type: integer
-          example: 1
-        odb_splitter:
-          type: string
-          example: Nap16
-    GetNapsList2:
-      type: object
-      properties:
-        id:
-          type: integer
-          example: 1
-        odb_splitter:
-          type: string
-          example: Nap16
+    GetNapsList:
+      $ref: 'sistema/components/nap/get_naps_list_response.yaml'
 
     #OLTs
     OLTRequest:
