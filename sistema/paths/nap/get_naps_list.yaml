@@ -10,7 +10,7 @@ responses:
     content:
       application/json:
         schema:
-          anyOf:
+          oneOf:
             - $ref: '#/components/schemas/GetNapsList'
   '203':
     description: Non-Authoritative Information
