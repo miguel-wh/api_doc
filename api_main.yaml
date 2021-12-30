@@ -162,7 +162,7 @@ components:
     GetSpeedProfileUploadResponse:
       $ref: 'sistema/components/speed_plans/speedprofiles_upload_response.yaml'
 
-    #OLTs
+    ## OLTs
     OLTRequest:
       $ref: 'olt/components/olt_request.yaml'
     OLTResponse:
@@ -172,7 +172,7 @@ components:
     LineProfilesResponse:
       $ref: 'olt/components/get_line_profiles_response.yaml'
 
-    User:    # Schema name TEST ARRAY OF OBJECTS ANONYMUS
+    User:    # Schema EXAMPLE TEST ARRAY OF OBJECTS ANONYMUS
       type: array
       items:
         type: object
@@ -188,7 +188,7 @@ components:
         name: angel
       
 
-    # ONUs
+    ## ONUs
     OnuUnauthorizedRequest:
       $ref: 'onu/components/list_unauthorized_onu_request.yaml'
     OnuUnauthorizedResponse:
