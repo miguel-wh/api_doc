@@ -10,7 +10,7 @@ responses:
     content:
       application/json:
         schema:
-          oneOf:
+          anyOf:
             - $ref: '#/components/schemas/GetNapsList1'
             - $ref: '#/components/schemas/GetNapsList2'
   '203':
