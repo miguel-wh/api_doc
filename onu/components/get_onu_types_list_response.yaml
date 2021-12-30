@@ -8,6 +8,7 @@ items:
       type: string
     capability_type:
       type: string
+      description: Bridging or Bridging/Routing
     image:
       type: string
 example:
