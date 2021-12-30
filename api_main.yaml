@@ -32,6 +32,7 @@ tags:
     description: Everything about your Zones
   - name: Maps
     description: Everything about you Maps
+  - name: NAP
 x-tagGroups:
   - name: ONU
     tags:
@@ -45,6 +46,7 @@ x-tagGroups:
     tags:
       - Zones
       - Maps
+      - NAP
 
 ### URLS - ENDPOINTS ####
 paths:
@@ -72,6 +74,11 @@ paths:
   /list-markers/<int:id_map>/:
     get:
       $ref: 'sistema/paths/maps/get_list_of_markers_of_map_by_id.yaml'
+
+  # NAP
+  /naps/:
+    get:
+      $ref: 'sistema/paths/nap/get_naps_list.yaml'
 
   # All about OLTs
   /olt-list/:
@@ -136,6 +143,26 @@ components:
       $ref: 'sistema/components/maps/get_map_by_id_response.yaml'
     GetListMarkersMapByIdResponse:
       $ref: 'sistema/components/maps/get_list_of_markers_of_map_by_id_response.yaml'
+    # NAP
+    GetNapsList1:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        odb_splitter:
+          type: string
+          example: Nap16
+    GetNapsList2:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        odb_splitter:
+          type: string
+          example: Nap16
+
     #OLTs
     OLTRequest:
       $ref: 'olt/components/olt_request.yaml'
