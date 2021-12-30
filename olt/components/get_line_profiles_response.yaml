@@ -28,10 +28,17 @@ properties:
               properties:
                 id:
                   type: integer
-                  example: 1
                 service:
                   type: string
-                  example: INTERNET
                 vlan:
                   type: integer
-                  example: 0
+            example:
+              - id: 1
+                service: INTERNET
+                vlan: 110
+              - id: 2
+                service: IPTV
+                vlan: 111
+              - id: 3
+                service: VOIP
+                vlan: 112

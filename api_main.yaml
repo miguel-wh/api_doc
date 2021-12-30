@@ -172,7 +172,7 @@ components:
     LineProfilesResponse:
       $ref: 'olt/components/get_line_profiles_response.yaml'
 
-    User:    # Schema EXAMPLE TEST ARRAY OF OBJECTS ANONYMUS
+    User: # Schema EXAMPLE TEST ARRAY OF OBJECTS ANONYMUS
       type: array
       items:
         type: object

@@ -15,9 +15,9 @@ example:
   - id: 1
     onu_type: HG8010H
     capability_type: Bridging
-    image: http://{{subdominio}}.bitolmiguelangel.com/media/empresa/onu/hg8010h.png
+    image: http://{{subdominio}}.adminolt.com/media/empresa/onu/hg8010h.png
 
   - id: 2
     onu_type: HG8120C
     capability_type: Bridging/Routing
-    image: http://{{subdominio}}.bitolmiguelangel.com/media/empresa/onu/hg8010h.png 
+    image: http://{{subdominio}}.adminolt.com/media/empresa/onu/hg8010h.png 
