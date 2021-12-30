@@ -21,6 +21,8 @@ info:
 externalDocs:
   description: Find out how to create Github repo for your OpenAPI spec.
   url: 'https://github.com/Rebilly/generator-openapi-repo'
+
+### SECTIONS ENDPOINTS ###
 tags:
   - name: ONUs
     description: Everything about your ONUs
@@ -43,6 +45,8 @@ x-tagGroups:
     tags:
       - Zones
       - Maps
+
+### URLS - ENDPOINTS ####
 paths:
   ## All about System
   # ZONES
@@ -76,6 +80,9 @@ paths:
   /vlans/<int:olt_id>/:
     get:
       $ref: 'olt/paths/get_vlans_list.yaml'
+  /olt/line-profiles/<int:olt_id>/:
+    get:
+      $ref: 'olt/paths/get_line_profiles_list.yaml'
   /example-users/:
     get:
       $ref: 'olt/paths/users_list.yaml'
@@ -97,6 +104,8 @@ paths:
     get:
       $ref: 'onu/paths/get_onu_types_list.yaml'
 
+
+### DEFINITION - RESPONSE OF ENDPOINT ###
 components:
   schemas:
     ApiResponse:
@@ -109,6 +118,7 @@ components:
           type: string
         message:
           type: string
+
     ## System
     # Zones
     ZoneRequest:
@@ -133,7 +143,10 @@ components:
       $ref: 'olt/components/olt_response.yaml'
     VlansListResponse101:
       $ref: 'olt/components/get_vlans_response_101.yaml'
-    User:    # Schema name
+    LineProfilesResponse:
+      $ref: 'olt/components/get_line_profiles_response.yaml'
+
+    User:    # Schema name TEST ARRAY OF OBJECTS ANONYMUS
       type: object
       properties:
         id:

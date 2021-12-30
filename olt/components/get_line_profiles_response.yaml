@@ -1,0 +1,37 @@
+type: object
+properties:
+  id:
+    type: integer
+    example: 1
+  line_profiles:
+    type: object
+    properties:
+      1:
+        type: object
+        properties:
+          id:
+            type: integer
+            example: 1
+          name:
+            type: string
+            example: ADMINOLT_GPON
+          description:
+            type: string
+            example: ""
+          mapping_mode:
+            type: string
+            example: priority
+          gemports:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  example: 1
+                service:
+                  type: string
+                  example: INTERNET
+                vlan:
+                  type: integer
+                  example: 0
