@@ -4,7 +4,11 @@ items:
   properties:
     id:
       type: integer
-      example: 1
     odb_splitter:
       type: string
-      example: Nap16
+example:
+  - id: 1
+    odb_splitter: Nap16
+  - id: 2
+    odb_splitter: NAP Zona Centro
+
