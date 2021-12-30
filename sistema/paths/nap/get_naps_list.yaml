@@ -10,21 +10,7 @@ responses:
     content:
       application/json:
         schema:
-          type: array
-          items:
-            oneOf:
-            - type: object
-              properties:
-                id:
-                  type: integer
-                  example: 1
-            - type: object
-              properties:
-                id:
-                  type: integer
-                  example: 2
-          
-          #$ref: '#/components/schemas/GetNapsList'
+          $ref: '#/components/schemas/GetNapsList'
   '203':
     description: Non-Authoritative Information
     content:
