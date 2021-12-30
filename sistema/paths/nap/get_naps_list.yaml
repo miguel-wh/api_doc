@@ -18,17 +18,11 @@ responses:
                 id:
                   type: integer
                   example: 1
-                odb_splitter:
-                  type: string
-                  example: Nap16
             - type: object
               properties:
                 id:
                   type: integer
                   example: 2
-                odb_splitter:
-                  type: string
-                  example: NAP Zona Centro
           
           #$ref: '#/components/schemas/GetNapsList'
   '203':
