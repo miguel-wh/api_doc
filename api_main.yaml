@@ -243,5 +243,3 @@ components:
     ## Section ONU
     AuthorizeOnuRequestPOST: # Authorize Onu
       $ref: 'onu/components/post_authorize_onu_request_body.yaml'
-    AuthorizeOnuAdvancedRequestPOST: # Authorize Onu config advanced
-      $ref: 'onu/components/post_authorize_onu_request_body_advanced.yaml'
