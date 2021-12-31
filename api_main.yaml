@@ -125,7 +125,6 @@ paths:
   /onu/authorize/:
     post:
       $ref: 'onu/paths/post_onu_authorize.yaml'
-  /onu/authorize/:
     post:
       $ref: 'onu/paths/post_onu_authorize_advanced.yaml'
 
