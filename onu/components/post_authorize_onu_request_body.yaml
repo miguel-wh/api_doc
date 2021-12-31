@@ -1,4 +1,18 @@
 type: object
+required:
+  - chasis
+  - board
+  - port
+  - sn
+  - onu_type
+  - onu_mode
+  - cvlan
+  - svlan
+  - upload_speed
+  - download_speed
+  - name
+  - interface
+  - olt_id
 properties:
   chasis:
     type: integer
@@ -24,10 +38,10 @@ properties:
   svlan:
     type: string
     example: 100
-  zone:
+  zone: # opcional
     type: string
     example: "None"
-  odb_splitter:
+  odb_splitter: # opcional
     type: string
     example: "None"
   upload_speed:
@@ -39,19 +53,19 @@ properties:
   name:
     type: string
     example: Miguel Angel
-  comment:
+  comment: # opcional
     type: string
     example: ""
-  address:
+  address: # opcional
     type: string
     example: ""
-  phone:
+  phone: # opcional
     type: string
     example: ""
-  longitude:
+  longitude: # opcional
     type: string
     example: ""
-  latitude:
+  latitude: # opcional
     type: string
     example: ""
   interface:
