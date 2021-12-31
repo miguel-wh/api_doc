@@ -77,10 +77,10 @@ properties:
   use_advanced_config:
     type: boolean
     example: false
-    description: If key-> use_advanced_config is True, the following parameters are required.
+    description: Optional, only applies to onus Huawei
   advanced_config_params:
     type: object
-    description: EXPLICAR DE QUE TRATA
+    description: If key-> use_advanced_config is True, the following parameters are required.
     properties:
       line_profile:
         type: string
