@@ -240,4 +240,4 @@ components:
     
     ## Section ONU
     AuthorizeOnuRequestPOST:
-      $ref: 'authorize_onu_request_post.yaml'
+      $ref: 'onu/components/post_authorize_onu_request_body.yaml'
