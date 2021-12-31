@@ -125,6 +125,9 @@ paths:
   /onu/authorize/:
     post:
       $ref: 'onu/paths/post_onu_authorize.yaml'
+  /onu/authorize/:
+    post:
+      $ref: 'onu/paths/post_onu_authorize_advanced.yaml'
 
 
 
@@ -214,7 +217,7 @@ components:
     OnuTypesResponse:
       $ref: 'onu/components/get_onu_types_list_response.yaml'
 
-  ### RequestBody DATA in ENDPOINTS POST/PUT###
+  ### RequestBody DATA in ENDPOINTS POST/PUT ###
   requestBodies:
     ## Section ZONE
     ZoneRequest:
@@ -239,5 +242,7 @@ components:
       required: true
     
     ## Section ONU
-    AuthorizeOnuRequestPOST:
+    AuthorizeOnuRequestPOST: # Authorize Onu
       $ref: 'onu/components/post_authorize_onu_request_body.yaml'
+    AuthorizeOnuAdvancedRequestPOST: # Authorize Onu config advanced
+      $ref: 'onu/components/post_authorize_onu_request_body_advanced.yaml'

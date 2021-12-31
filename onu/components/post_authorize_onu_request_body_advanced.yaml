@@ -1,0 +1,50 @@
+use_advanced_config:
+  type: boolean
+  example: false
+  description: EXPLICAR DE QUE TRATA
+  advanced_config_params:
+    type: object
+    description: EXPLICAR DE QUE TRATA
+    properties:
+      line_profile:
+        type: string
+        example: 1
+      services:
+        description: EXAPLICAR 
+        type: array
+        items:
+          type: object
+          properties:
+            use_service:
+              description: EXPLICAR
+              type: boolean
+            cvlan_advanced:
+              type: string
+            svlan_advanced:
+              type: string
+            upload_speed_advanced:
+              type: integer
+            download_speed_advanced:
+              type: integer
+            service:
+              type: string
+              example: INTERNET
+        example:
+          - use_service: true
+            cvlan_advanced: 100
+            svlan_advanced: 100
+            upload_speed_advanced: 4
+            download_speed_advanced: 5
+            service: INTERNET
+          - use_service: true
+            cvlan_advanced: 200
+            svlan_advanced: 200
+            upload_speed_advanced: 4
+            download_speed_advanced: 5
+            service: IPTV
+          - use_service: true
+            cvlan_advanced: 300
+            svlan_advanced: 300
+            upload_speed_advanced: 4
+            download_speed_advanced: 5
+            service: VOIP
