@@ -77,7 +77,7 @@ properties:
   use_advanced_config:
     type: boolean
     example: false
-    description: EXPLICAR DE QUE TRATA
+    description: If key-> use_advanced_config is True, the following parameters are required.
   advanced_config_params:
     type: object
     description: EXPLICAR DE QUE TRATA
