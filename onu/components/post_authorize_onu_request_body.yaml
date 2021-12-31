@@ -80,7 +80,7 @@ properties:
     description: Optional, only applies to onus Huawei
   advanced_config_params:
     type: object
-    description: If key-> use_advanced_config is True, the following parameters are required.
+    description: If key-> ```use_advanced_config is True``, the following parameters are required.
     properties:
       line_profile:
         type: string
