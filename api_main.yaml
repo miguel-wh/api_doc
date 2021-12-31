@@ -122,9 +122,10 @@ paths:
     get:
       $ref: 'onu/paths/get_onu_types_list.yaml'
   # POST
-  /onu/authorize/:
+  '/onu/authorize/':
     post:
       $ref: 'onu/paths/post_onu_authorize.yaml'
+    
     post:
       $ref: 'onu/paths/post_onu_authorize_advanced.yaml'
 
