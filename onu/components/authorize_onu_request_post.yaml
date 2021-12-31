@@ -1,0 +1,112 @@
+type: object
+properties:
+  chasis:
+    type: integer
+    example: 0
+  board:
+    type: string
+    example: 2
+  port:
+    type: integer
+    example: 0
+  sn:
+    type: string
+    example: 485754430B644B9F
+  onu_type:
+    type: string
+    example: 36
+  onu_mode:
+    type: string
+    example: 1
+  cvlan:
+    type: string
+    example: 100
+  svlan:
+    type: string
+    example: 100
+  zone:
+    type: string
+    example: "None"
+  odb_splitter:
+    type: string
+    example: "None"
+  upload_speed:
+    type: integer
+    example: 4
+  download_speed:
+    type: integer
+    example: 5
+  name:
+    type: string
+    example: Miguel Angel
+  comment:
+    type: string
+    example: ""
+  address:
+    type: string
+    example: ""
+  phone:
+    type: string
+    example: ""
+  longitude:
+    type: string
+    example: ""
+  latitude:
+    type: string
+    example: ""
+  interface:
+    type: string
+    example: 4194320384
+  olt_id:
+    type: integer
+    example: 5
+  use_advanced_config:
+    type: boolean
+    example: false
+    description: EXPLICAR DE QUE TRATA
+  advanced_config_params:
+    type: object
+    description: EXPLICAR DE QUE TRATA
+    properties:
+      line_profile:
+        type: string
+        example: 1
+      services:
+        description: EXAPLICAR 
+        type: array
+        items:
+          type: object
+          properties:
+            use_service:
+              description: EXPLICAR
+              type: boolean
+            cvlan_advanced:
+              type: string
+            svlan_advanced:
+              type: string
+            upload_speed_advanced:
+              type: integer
+            download_speed_advanced:
+              type: integer
+            service:
+              type: string
+              example: INTERNET
+        example:
+          - use_service: true
+            cvlan_advanced: 100
+            svlan_advanced: 100
+            upload_speed_advanced: 4
+            download_speed_advanced: 5
+            service: INTERNET
+          - use_service: true
+            cvlan_advanced: 200
+            svlan_advanced: 200
+            upload_speed_advanced: 4
+            download_speed_advanced: 5
+            service: IPTV
+          - use_service: true
+            cvlan_advanced: 300
+            svlan_advanced: 300
+            upload_speed_advanced: 4
+            download_speed_advanced: 5
+            service: VOIP

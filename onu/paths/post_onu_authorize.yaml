@@ -4,7 +4,11 @@ summary: Authorize ONU
 description: description pending....
 operationId: addAuthorizeONU
 requestBody:
-  # add
+  description: requestBody
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/requestBodies/AuthorizeOnuRequestPOST'
 responses:
   '200':
     description: Created

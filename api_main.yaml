@@ -213,7 +213,10 @@ components:
       $ref: 'onu/components/get_status_of_onu_response_101.yaml'
     OnuTypesResponse:
       $ref: 'onu/components/get_onu_types_list_response.yaml'
+
+  ### RequestBody DATA in ENDPOINTS POST/PUT###
   requestBodies:
+    ## Section ZONE
     ZoneRequest:
       content:
         application/json:
@@ -234,3 +237,7 @@ components:
               - $ref: '#/components/schemas/ZoneRequest'
       description: Zone object that needs to be update to the system
       required: true
+    
+    ## Section ONU
+    AuthorizeOnuRequestPOST:
+      $ref: 'authorize_onu_request_post.yaml'
