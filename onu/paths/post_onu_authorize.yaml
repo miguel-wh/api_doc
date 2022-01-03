@@ -8,9 +8,8 @@ requestBody:
     application/json:
       schema:
         $ref: '#/components/requestBodies/AuthorizeOnuRequestPOST'
-      
-  description: |
-  CONFIGURACION AVANZADA
+
+  description: CONFIGURACION AVANZADA
 responses:
   '200':
     description: Created
@@ -34,5 +33,3 @@ x-code-samples:
       
       response = requests.post(url=endpoint, headers=headers, data=data)
       print(response.content)
-security:
-  - api_key: []
