@@ -1,7 +1,7 @@
 tags:
 - ONUs
 summary: Authorize ONU
-description: description pending....
+description: Authorizes an ONU on the indicated OLT
 operationId: addAuthorizeONU
 requestBody:
   content:
@@ -26,29 +26,84 @@ x-code-samples:
           "Authorization": "Token {{token}}" 
       }
       
-      
+      # Params: Authorize ONU.
       data = {
-        "chasis": 0,
-        "board": 2,
-        "port": 0,
-        "sn": "485754430B644B9F",
-        "onu_type": 36,
-        "onu_mode": 1,
-        "cvlan": 100,
-        "svlan": 100,
-        "zone": "None",
-        "odb_splitter": "None",
-        "upload_speed": 4,
-        "download_speed": 5,
-        "name": "Miguel Angel",
-        "comment": "",
-        "address": "",
-        "phone": "",
-        "longitude": "", 
-        "latitude": "",
-        "interface": 4194320384,
-        "olt_id": 5,
-      } 
+            "chasis": 0,
+            "board": 2,
+            "port": 0,
+            "sn": "485754430B644B9F",
+            "onu_type": 36,
+            "onu_mode": 1,
+            "cvlan": 100,
+            "svlan": 100,
+            "zone": "None",
+            "odb_splitter": "None",
+            "upload_speed": 4,
+            "download_speed": 5,
+            "name": "Miguel Angel",
+            "comment": "",
+            "address": "",
+            "phone": "",
+            "longitude": "",
+            "latitude": "",
+            "interface": 4194320384,
+            "olt_id": 5
+          } 
+
+      # Params: Authorize ONU with advanced configuration
+      # Note: This only applies to Huawei ONUs
+      data: {
+            "chasis": 0,
+            "board": 2,
+            "port": 0,
+            "sn": "485754430B644B9F",
+            "onu_type": 36,
+            "onu_mode": 1,
+            "cvlan": 100,
+            "svlan": 100,
+            "zone": "None",
+            "odb_splitter": "None",
+            "upload_speed": 4,
+            "download_speed": 5,
+            "name": "Miguel Angel",
+            "comment": "",
+            "address": "",
+            "phone": "",
+            "longitude": "",
+            "latitude": "",
+            "interface": 4194320384,
+            "olt_id": 5,
+            "use_advanced_config": true, // Advanced configuration
+            "advanced_config_params": {  // Params advanced configuration
+              "line_profile": 1,
+              "services": [
+                {
+                  "use_service": true,
+                  "cvlan_advanced": 100,
+                  "svlan_advanced": 100,
+                  "upload_speed_advanced": 4,
+                  "download_speed_advanced": 5,
+                  "service": "INTERNET"
+                },
+                {
+                  "use_service": true,
+                  "cvlan_advanced": 200,
+                  "svlan_advanced": 200,
+                  "upload_speed_advanced": 4,
+                  "download_speed_advanced": 5,
+                  "service": "IPTV"
+                },
+                {
+                  "use_service": true,
+                  "cvlan_advanced": 300,
+                  "svlan_advanced": 300,
+                  "upload_speed_advanced": 4,
+                  "download_speed_advanced": 5,
+                  "service": "VOIP"
+                }
+              ]
+            }
+          }
       
       response = requests.post(url=endpoint, headers=headers, data=data)
       print(response.content)
