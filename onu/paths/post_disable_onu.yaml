@@ -1,12 +1,12 @@
 tags:
 - ONUs
-summary: Enable ONU
-description: Enable an ONU through the id.
-operationId: addEnableONU
+summary: Disable ONU
+description: Disable an ONU through the id.
+operationId: addDisableONU
 parameters:
   - name: id_onu
     in: path
-    description: id_onu of ONU to enable
+    description: id_onu of ONU to disable
     required: true
     schema:
       type: integer
@@ -31,7 +31,7 @@ responses:
         schema:
           type: object
           properties:
-            enable_onu:
+            disable_onu:
               type: boolean
               example: True
             status:
@@ -39,13 +39,13 @@ responses:
               example: DONE
             task_id:
               type: string
-              example: 3468812f-4711-4842-b331-b0d670c978a1
+              example: cdbfb12f-ca02-47e0-8f9f-08158dba57b2
 
 x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/enable/<int:id_onu>/"
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/disable/<int:id_onu>/"
       
       headers = {
           "Authorization": "Token {{token}}"
