@@ -26,8 +26,29 @@ x-code-samples:
           "Authorization": "Token {{token}}" 
       }
       
+      
       data = {
-      }
+        "chasis": 0,
+        "board": 2,
+        "port": 0,
+        "sn": "485754430B644B9F",
+        "onu_type": 36,
+        "onu_mode": 1,
+        "cvlan": 100,
+        "svlan": 100,
+        "zone": "None",
+        "odb_splitter": "None",
+        "upload_speed": 4,
+        "download_speed": 5,
+        "name": "Miguel Angel",
+        "comment": "",
+        "address": "",
+        "phone": "",
+        "longitude": "", 
+        "latitude": "",
+        "interface": 4194320384,
+        "olt_id": 5,
+      } 
       
       response = requests.post(url=endpoint, headers=headers, data=data)
       print(response.content)

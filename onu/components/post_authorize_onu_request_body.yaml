@@ -82,8 +82,8 @@ properties:
   advanced_config_params:
     type: object
     description: |
-      Advanced configuration parameters when ```advanced config: true```
-      If ```advanced config: false``` it is not necessary to send these parameters
+      Advanced configuration parameters when ```use_advanced_config: true```
+      If ```use_advanced_config: false``` it is not necessary to send these parameters
     properties:
       line_profile:
         type: string
