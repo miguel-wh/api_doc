@@ -78,7 +78,7 @@ properties:
     type: boolean
     example: false
     description: |
-      If you require advanced configuration send True. Example ```use_advanced_config: true```. Note: This only applies to Huawei ONUs
+      If you require advanced configuration send True. Example: ```use_advanced_config: true```. Note: This only applies to Huawei ONUs
   advanced_config_params:
     type: object
     description: 
@@ -87,7 +87,9 @@ properties:
         type: string
         example: 1
       services:
-        description: EXAPLICAR 
+        description: |
+          Advanced configuration parameters.
+          If ```advanced config: false``` it is not necessary to send these parameters
         type: array
         items:
           type: object
