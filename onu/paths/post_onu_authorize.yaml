@@ -1,14 +1,13 @@
 tags:
 - ONUs
 summary: Authorize ONU
+description: description pending....
 operationId: addAuthorizeONU
 requestBody:
   content:
     application/json:
       schema:
         $ref: '#/components/requestBodies/AuthorizeOnuRequestPOST'
-
-description: description pending....
 responses:
   '200':
     description: Created
@@ -32,3 +31,5 @@ x-code-samples:
       
       response = requests.post(url=endpoint, headers=headers, data=data)
       print(response.content)
+security:
+  - api_key: []
