@@ -10,6 +10,7 @@ requestBody:
         $ref: '#/components/requestBodies/AuthorizeOnuRequestPOST'
 
   description: CONFIGURACION AVANZADA
+  required: true
 responses:
   '200':
     description: Created
