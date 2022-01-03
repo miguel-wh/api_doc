@@ -1,7 +1,6 @@
 tags:
 - ONUs
 summary: Authorize ONU
-description: description pending....
 operationId: addAuthorizeONU
 requestBody:
   content:
@@ -9,9 +8,7 @@ requestBody:
       schema:
         $ref: '#/components/requestBodies/AuthorizeOnuRequestPOST'
 
-info:
-  description: CONFIGURACION AVANZADA
-  required: true
+description: description pending....
 responses:
   '200':
     description: Created
