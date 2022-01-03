@@ -9,6 +9,7 @@ requestBody:
       schema:
         $ref: '#/components/requestBodies/AuthorizeOnuRequestPOST'
 
+info:
   description: CONFIGURACION AVANZADA
   required: true
 responses:
