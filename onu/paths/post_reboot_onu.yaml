@@ -1,9 +1,16 @@
 tags:
 - ONUs
-summary: Authorize ONU
-description: Authorizes an ONU on the indicated OLT
-operationId: addAuthorizeONU
-
+summary: Reebot ONU
+description: Reebot an ONU through the id
+operationId: addReebotONU
+parameters:
+  - name: id_onu
+    in: path
+    description: id_onu of ONU to reebot
+    required: true
+    schema:
+      type: integer
+      format: number
 responses:
   '200':
     description: Created
