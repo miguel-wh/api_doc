@@ -125,6 +125,9 @@ paths:
   /onu/authorize/:
     post:
       $ref: 'onu/paths/post_onu_authorize.yaml'
+  /onu/reboot/<int:id_onu>/:
+    post:
+      $ref: 'onu/paths/post_reboot_onu.yaml'
 
 
 

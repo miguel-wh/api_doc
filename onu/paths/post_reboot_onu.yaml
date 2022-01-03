@@ -1,0 +1,50 @@
+tags:
+- ONUs
+summary: Authorize ONU
+description: Authorizes an ONU on the indicated OLT
+operationId: addAuthorizeONU
+
+responses:
+  '200':
+    description: Created
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            facility:
+              type: string
+              example: 8374d9dd-8bdf-455e-8389-5601bdd8f2fe
+              description: Returns a UUID of the process, to know the status of the task it is necessary to open a WebSocket connection, using UUID (facility)
+
+  '101':
+    description: Web Socket Protocol Handshake
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            reboot_onu:
+              type: boolean
+              example: True
+            status:
+              type: string
+              example: DONE
+            task_id:
+              type: string
+              example: 31f07102-26d3-40f7-9525-666801068c92
+
+x-code-samples:
+  - lang: Python
+    source: |
+      import requests
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/reboot/<int:id_onu>/"
+      
+      headers = {
+          "Authorization": "Token {{token}}"
+      }
+
+      data = {}
+      
+      response = requests.post(url=endpoint, headers=headers, data=data)
+      print(response.content)
