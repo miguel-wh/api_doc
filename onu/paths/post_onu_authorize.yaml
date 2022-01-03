@@ -14,7 +14,10 @@ responses:
     content:
       application/json:
         schema:
-          # add
+          type: object
+            task_id:
+                type: string
+                example: 41ada76b-d78a-44f5-91b2-cfb088078bea
 
 x-code-samples:
   - lang: Python
