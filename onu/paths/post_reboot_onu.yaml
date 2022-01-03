@@ -22,7 +22,7 @@ responses:
             facility:
               type: string
               example: 8374d9dd-8bdf-455e-8389-5601bdd8f2fe
-              description: Returns a UUID of the process, to know the status of the task it is necessary to open a WebSocket connection, using UUID (facility)
+              description: Returns a UUID of the process, to know the status of the task it is necessary to open a WebSocket connection, using UUID (facility). [Example](#section/WebSocket)
 
   '101':
     description: Web Socket Protocol Handshake
