@@ -90,7 +90,7 @@ properties:
         example: 1
       services:
         description: |
-          s
+          You can activate multiple services.
         type: array
         items:
           type: object
