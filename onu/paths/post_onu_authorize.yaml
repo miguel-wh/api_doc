@@ -8,6 +8,9 @@ requestBody:
     application/json:
       schema:
         $ref: '#/components/requestBodies/AuthorizeOnuRequestPOST'
+info:
+  description: |
+  CONFIGURACION AVANZADA
 responses:
   '200':
     description: Created
