@@ -128,6 +128,9 @@ paths:
   /onu/reboot/<int:id_onu>/:
     post:
       $ref: 'onu/paths/post_reboot_onu.yaml'
+  /onu/enable/<int:id_onu>/:
+    post:
+      $ref: 'onu/paths/post_reboot_onu.yaml'
 
 
 

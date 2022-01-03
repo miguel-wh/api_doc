@@ -1,8 +1,8 @@
 tags:
 - ONUs
-summary: Reebot ONU
-description: Reebot an ONU through the id
-operationId: addReebotONU
+summary: Enable ONU
+description: Enable an ONU through the id.
+operationId: addEnableONU
 parameters:
   - name: id_onu
     in: path
@@ -21,7 +21,7 @@ responses:
           properties:
             facility:
               type: string
-              example: 8374d9dd-8bdf-455e-8389-5601bdd8f2fe
+              example: 8674d9dd-8cdf-455e-8389-5601bdd8f2fe
               description: Returns a UUID of the process, to know the status of the task it is necessary to open a WebSocket connection, using UUID (facility). [Example](#section/WebSocket)
 
   '101':
@@ -31,7 +31,7 @@ responses:
         schema:
           type: object
           properties:
-            reboot_onu:
+            enable_onu:
               type: boolean
               example: True
             status:
@@ -39,13 +39,13 @@ responses:
               example: DONE
             task_id:
               type: string
-              example: 31f07102-26d3-40f7-9525-666801068c92
+              example: 3468812f-4711-4842-b331-b0d670c978a1
 
 x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/reboot/<int:id_onu>/"
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/enable/<int:id_onu>/"
       
       headers = {
           "Authorization": "Token {{token}}"
