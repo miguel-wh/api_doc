@@ -36,7 +36,7 @@ responses:
           properties:
             response:
               type: string
-              example: <i class='fa fa-check mr-2'></i>Se ha eliminado correctamente la onu <strong>0</strong> del puerto <strong>0</strong>\n
+              example: <i class='fa fa-check mr-2'></i>Se ha eliminado correctamente la onu <strong>0</strong> del puerto <strong>0</strong>
             status:
               type: string
               example: DONE
