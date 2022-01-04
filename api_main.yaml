@@ -134,6 +134,9 @@ paths:
   /onu/disable/<int:id_onu>/:
     post:
       $ref: 'onu/paths/post_disable_onu.yaml'
+  /onu/restore/<int:id_onu>/:
+    post:
+      $ref: 'onu/paths/post_restore_onu.yaml'
 
 
 

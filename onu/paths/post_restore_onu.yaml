@@ -1,0 +1,57 @@
+tags:
+- ONUs
+summary: Restore ONU
+description: Restore an ONU of factory through the id.
+operationId: addRestoreONU
+parameters:
+  - name: id_onu
+    in: path
+    description: id_onu of ONU to restore it of factory.
+    required: true
+    schema:
+      type: integer
+      format: number
+responses:
+  '200':
+    description: OK
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            facility:
+              type: string
+              example: 8174d2cd-8cdf-455e-8389-5601bdd8f2fe
+              description: Returns a UUID of the process, to know the status of the task it is necessary to open a WebSocket connection, using UUID (facility). [Example](#section/WebSocket)
+
+  '101':
+    description: Web Socket Protocol Handshake
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            restore_onu:
+              type: string
+              example: ONU successfully restored
+            status:
+              type: string
+              example: DONE
+            task_id:
+              type: string
+              example: a75101b9-36e9-4365-9ebd-3283e086e0bd
+
+x-code-samples:
+  - lang: Python
+    source: |
+      import requests
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/restore/<int:id_onu>/"
+      
+      headers = {
+          "Authorization": "Token {{token}}"
+      }
+
+      data = {}
+      
+      response = requests.post(url=endpoint, headers=headers, data=data)
+      print(response.content)
