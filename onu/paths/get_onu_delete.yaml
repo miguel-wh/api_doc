@@ -1,0 +1,60 @@
+tags:
+- ONUs
+summary: Delete ONU by ONU serial number
+description: Delete an ONU in the OLT and in AdminOLT by specifying the ONU's serial number
+operationId: addEnableONU
+requestBody:
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          sn:
+            type: string
+            example: 265754431B2CE496
+            description: ONU serial number
+
+responses:
+  '200':
+    description: OK
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            facility:
+              type: string
+              example: 8674d9dd-8cdf-455e-8389-5601bdd8f2fe
+              description: Returns a UUID of the process, to know the status of the task it is necessary to open a WebSocket connection, using UUID (facility). [Example](#section/WebSocket)
+
+  '101':
+    description: Web Socket Protocol Handshake
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            response:
+              type: string
+              example: <i class='fa fa-check mr-2'></i>Se ha eliminado correctamente la onu <strong>0</strong> del puerto <strong>0</strong>\n
+            status:
+              type: string
+              example: DONE
+            task_id:
+              type: string
+              example: 3468812f-4711-4842-b331-b0d670c978a1
+
+x-code-samples:
+  - lang: Python
+    source: |
+      import requests
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/delete/"
+      
+      headers = {
+          "Authorization": "Token {{token}}"
+      }
+
+      params = {'sn': "265754431B2CE496"}
+      
+      response = requests.get(url=endpoint, headers=headers, params=params)
+      print(response.content)
