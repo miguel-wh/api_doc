@@ -142,7 +142,7 @@ paths:
       $ref: 'onu/paths/post_restore_onu.yaml'
   /onu/create/wan-ip/<int:id_onu>/:
     post:
-      $ref: 'onu/paths/post_create_wan_ip.yaml'     
+      $ref: 'onu/paths/post_create_wan_ip.yaml'   
 
 
 

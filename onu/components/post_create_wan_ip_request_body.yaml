@@ -2,31 +2,35 @@ type: object
 properties:
   connection_name:
     type: string
-    example: x
+    example: Conection static
   vlan:
     type: integer
-    example: 1
+    example: 110
+    description: ID Vlan
   type:
     type: string
     example: STATIC
+    description: Configuration type
   priority:
-    type: string
-    example: xxx
+    type: integer
+    example: 1
+    description: Priority level
   ip_index:
-    type: string
-    example: xxx
+    type: integer
+    example: 0
+    description: WAN ID at ONU
   ip:
     type: string
-    example: xxx
+    example: "192.168.200.50"
   mask:
     type: string
-    example: xxx
+    example: "255.255.255.0"
   gateway:
     type: string
     example: xxx
   primary_dns:
-    type: string
-    example: xxx
+    type: "192.168.200.1"
+    example: "8.8.8.8"
   secondary_dns:
     type: string
-    example: xxx
+    example: "8.8.4.4"
