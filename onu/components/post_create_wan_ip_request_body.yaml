@@ -3,6 +3,7 @@ properties:
   connection_name:
     type: string
     example: Conection static
+    description: This information is for informational use only for AdminOLT
   vlan:
     type: integer
     example: 110
@@ -27,9 +28,9 @@ properties:
     example: "255.255.255.0"
   gateway:
     type: string
-    example: xxx
+    example: "192.168.200.1"
   primary_dns:
-    type: "192.168.200.1"
+    type: string
     example: "8.8.8.8"
   secondary_dns:
     type: string
