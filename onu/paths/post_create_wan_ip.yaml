@@ -1,0 +1,46 @@
+tags:
+- ONUs
+summary: Create Wan IP ONU
+description: Create wan ip an ONU on the indicated OLT
+operationId: addAuthorizeONU
+parameters:
+  - name: id_onu
+    in: path
+    description: id_onu of ONU to create wan ip
+    required: true
+    schema:
+      type: integer
+      format: number
+
+requestBody:
+  content:
+    application/json:
+      schema:
+        $ref: '#/components/requestBodies/CreateWanIPOnuRequestPOST'
+responses:
+  '200':
+    description: Created
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            task_id:
+              type: string
+              example: 41ada76b-d78a-44f5-91b2-cfb088078bea
+              
+x-code-samples:
+  - lang: Python
+    source: |
+      import requests
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/create/wan-ip/<int:id_onu>/"
+  
+      headers = {
+          "Authorization": "Token {{token}}"
+      }
+      
+      
+      response = requests.post(url=endpoint, headers=headers, params=data)
+      print(response.content)
+security:
+  - api_key: []

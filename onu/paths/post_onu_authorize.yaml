@@ -109,7 +109,7 @@ x-code-samples:
             }
           }
       
-      response = requests.post(url=endpoint, headers=headers, data=data)
+      response = requests.post(url=endpoint, headers=headers, params=data)
       print(response.content)
 security:
   - api_key: []

@@ -140,6 +140,9 @@ paths:
   /onu/restore/<int:id_onu>/:
     post:
       $ref: 'onu/paths/post_restore_onu.yaml'
+  /onu/create/wan-ip/<int:id_onu>/:
+    post:
+      $ref: 'onu/paths/post_create_wan_ip.yaml'     
 
 
 
@@ -257,3 +260,5 @@ components:
     ## Section ONU
     AuthorizeOnuRequestPOST: # Authorize Onu
       $ref: 'onu/components/post_authorize_onu_request_body.yaml'
+    CreateWanIPOnuRequestPOST:
+      $ref: 'onu/components/post_create_wan_ip_request_body.yaml'
