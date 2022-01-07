@@ -130,6 +130,9 @@ paths:
   /onu/get-info-panel/:
     get:
       $ref: 'onu/paths/get_total_onus_authorized.yaml'
+  /onu/get-info-unauthorized-panel/:
+    get:
+      $ref: 'onu/paths/get_total_unauthorized_onus.yaml'
   # POST
   /onu/authorize/:
     post:

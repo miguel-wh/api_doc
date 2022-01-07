@@ -1,0 +1,66 @@
+tags:
+- ONUs
+summary: Get total unauthorized onus
+operationId: getTotalOnusAuthorized
+description: Get the total number of ONUs found unauthorized in all your OLTs
+responses:
+  '101':
+    description: Web Socket Protocol Handshake
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            total_unauthorized_onus:
+              type: integer
+              example: 2
+            status:
+              type: string
+              example: DONE
+            task_id:
+              type: string
+              example: cb266b9e-16ca-4eca-be11-cf17027e44cd
+          
+
+  '200':
+    description: Successful Operation
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            facility:
+              type: string
+              example: e5e72144-e1b7-4a30-a2b3-f5080471c213
+              description: Returns a UUID of the process, to obtain data it is necessary to connect through a WebSocket through the UUID. [Example](#section/WebSocket)
+          
+  '203':
+    description: Non-Authoritative Information
+    content:
+      application/json:
+        example:
+          message_status: "El token enviado no es valido" 
+
+  '401':
+    description: Unauthorized
+    content:
+      application/json:
+        example:
+          detail: "Las credenciales de autenticación no se proveyeron."
+  '405':
+    description: Method Not Allowed
+    content:
+      application/json:
+        example:
+          detail: "Metodo {{put,post,delete}} no permitido"
+          
+x-code-samples:
+  - lang: Python
+    source: |
+      import requests
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/get-info-unauthorized-panel/"
+      headers = {
+          "Authorization": "Token {{token}}" 
+      }
+      response = requests.get(url=endpoint, headers=headers)
+      print(response.content)
