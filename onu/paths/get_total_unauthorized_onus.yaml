@@ -1,7 +1,7 @@
 tags:
 - ONUs
 summary: Get total unauthorized onus
-operationId: getTotalOnusAuthorized
+operationId: getTotalOnusUnauthorized
 description: Get the total number of ONUs found unauthorized in all your OLTs
 responses:
   '101':
