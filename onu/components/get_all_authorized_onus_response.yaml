@@ -223,7 +223,7 @@ items:
         properties:
           id:
             type: integer
-            example: 1
+            example: 1237
           board:
             type: integer
             example: 0
