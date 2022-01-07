@@ -1,0 +1,260 @@
+type: array
+items:
+  type: object
+  properties:
+    uuid:
+      type: string
+      example: 038c7271-489e-416f-8695-4d4c19dd0909
+    id:
+      type: integer
+      example: 1130
+    sn:
+      type: string
+      example:
+      description: SN (Serial Number) of ONU
+    mode:
+      type: string
+      example: Routing
+    signal_level:
+      type: string
+      example: Stable
+    board:
+      type: integer
+      example: 0
+    slot:
+      type: integer
+      example: 11
+    port:
+      type: integer
+      example: 0
+    interface_type:
+      type: string
+      example: gpon
+    name:
+      type: string
+      example: test_onu
+    cvlan:
+      type: integer
+      example: 110
+    svlan:
+      type: integer
+      example: 110
+    comment:
+      type: string
+      example: ""
+    address:
+      type: string
+      example: ""
+    phone:
+      type: string
+      example: ""
+    longitude:
+      type: string
+      example: ""
+    latitude:
+      type: string
+      example: ""
+    external_id:
+      type: integer
+      example: 5
+    enable:
+      type: boolean
+      example: true
+    created_at:
+      type: string
+      example: "2022-01-03T15:56:30.865958-05:00"
+    updated_at:
+      type: string
+      example: "2022-01-07T13:13:14.542863-05:00"
+    deleted_at:
+      type: string
+      example: null
+    download_speed:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 8
+        uuid:
+          type: string
+          example: "2f609c99-407e-4f79-ae85-e0569f8e51b2"
+        name:
+          type: string
+          example: ADMINOLT-100-MEGAS-DOWN
+        type:
+          type: string
+          example: Internet
+        speed_type:
+          type: string
+          example: Descarga
+        speed:
+          type: integer
+          example: 100
+        description:
+          type: string
+          example: ""
+        default:
+          type: boolean
+          example: false
+        imported:
+          type: boolean
+          example: true
+        created:
+          type: string
+          example: "2020-08-05T12:17:52.894173-05:00"
+        updated_at:
+          type: string
+          example: "2020-08-05T12:17:52.896073-05:00"
+    upload_speed:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 7
+        uuid:
+          type: string
+          example: 60b506c0-b935-4565-a062-72c941949a7c
+        name:
+          type: string
+          example: ADMINOLT-100-MEGAS-UP
+        type:
+          type: string
+          example: Internet
+        speed_type:
+          type: string
+          example: Subida
+        speed:
+          type: integer
+          example: 100
+        description:
+          type: string
+          example: ""
+        default:
+          type: boolean
+          example: false
+        imported:
+          type: boolean
+          example: true
+        created:
+          type: string
+          example: "2020-08-05T12:17:52.885147-05:00"
+        updated_at:
+          type: string
+          example: "2020-08-05T12:17:52.887899-05:00"
+    olt_name:
+      type: string
+      example: MA5800 x15
+    olt_id:
+      type: integer
+      example: 5
+    image:
+      type: string
+      example: /media/empresa/onu/hg8326r.png
+    splitter:
+      type: string
+      example: NA
+    model:
+      type: string
+      example: HG8326R
+    zone:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Zone 1
+    status:
+      type: string
+      example: Online
+    type:
+      type: string
+      example: null
+    service_port_onu:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+            example: 1013
+          service_port:
+            type: integer
+            example: 2
+          interface:
+            type: string
+            example: "0/11/0"
+          interface_index:
+            type: integer
+            example: 4194394112
+          onu_index:
+            type: integer
+            example: 0
+          service_type:
+            type: string
+            example: INTERNET
+          cvlan:
+            type: integer
+            example: 110
+          svlan:
+            type: integer
+            example: 110
+          used:
+            type: boolean
+            example: true
+          created_at:
+            type: string
+            example: "2022-01-03T15:56:30.853230-05:00"
+          upload_speed:
+            type: integer
+            example: 7
+          download_speed:
+            type: integer
+            example: 8
+          olt:
+            type: integer
+            example: 5
+          onu:
+            type: integer
+            example: 1130
+    
+    onu_index_onu:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+            example: 1
+          board:
+            type: integer
+            example: 0
+          slot:
+            type: integer
+            example: 11
+          port:
+            type: integer
+            example: 0
+          interface:
+            type: string
+            example: "0/11/0"
+          interface_index:
+            type: integer
+            example: 4194394112
+          onu_index:
+            type: integer
+            example: 0
+          created_at:
+            type: string
+            example: "2022-01-03T15:56:30.856931-05:00"
+          olt:
+            type: integer
+            example: 5
+          onu:
+            type: integer
+            example: 1130
+    
+    olt_class_type:
+      type: string
+      example: Huawei
+    model_id:
+      type: integer
+      example: 11

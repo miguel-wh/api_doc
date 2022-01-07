@@ -109,6 +109,9 @@ paths:
   /onu/unauthorized/:
     get:
       $ref: 'onu/paths/list_unauthorized_onu.yaml'
+  /onus/authorized/:
+    get:
+      $ref: 'onu/paths/get_all_authorized_onus.yaml'
   /onus/authorized-by-sn/<str:sn>/:
     get:
       $ref: 'onu/paths/get_authorized-by-sn.yaml'
@@ -225,12 +228,17 @@ components:
       
 
     ## ONUs
+    # All Unauthorized ONU Response
     OnuUnauthorizedRequest:
       $ref: 'onu/components/list_unauthorized_onu_request.yaml'
     OnuUnauthorizedResponse:
       $ref: 'onu/components/list_unauthorized_onu_response.yaml'
     OnuUnauthorizedResponseWS:
       $ref: 'onu/components/list_unauthorized_onu_response_ws.yaml'
+    # All Authorized ONU Response
+    AllAuthorizedONUResponse:
+      $ref: 'onu/components/get_all_authorized_onus_response.yaml'
+
     GetOnuBySnResponse:
       $ref: 'onu/components/get_authorized-by-sn_response.yaml'
     GetSignalAuthorizedOnu:
@@ -244,7 +252,7 @@ components:
     OnuTypesResponse:
       $ref: 'onu/components/get_onu_types_list_response.yaml'
     TotalOnusAuthorizedResponse101:
-      $ref: 'onu/components/get_total_onus_authorized_response101.yaml'
+      $ref: 'onu/components/get_total_onus_authorized_response101.yaml' 
 
 
 
