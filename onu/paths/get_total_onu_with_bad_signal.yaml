@@ -1,0 +1,66 @@
+tags:
+- ONUs
+summary: Get total ONUs with bad signal
+operationId: getTotalOnusBadSignal
+description: Get the total number of ONUs found to have a bad signal among all your OLTs
+responses:
+  '101':
+    description: Web Socket Protocol Handshake
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            onus_with_bad_signal:
+              type: integer
+              example: 351
+            status:
+              type: string
+              example: DONE
+            task_id:
+              type: string
+              example: 3dcb5c97-db8a-4a1f-b3d7-728cc74981c0
+          
+
+  '200':
+    description: Successful Operation
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            facility:
+              type: string
+              example: e2067c44-abc5-437b-84e7-1636b9022cb4
+              description: Returns a UUID of the process, to obtain data it is necessary to connect through a WebSocket through the UUID. [Example](#section/WebSocket)
+          
+  '203':
+    description: Non-Authoritative Information
+    content:
+      application/json:
+        example:
+          message_status: "El token enviado no es valido" 
+
+  '401':
+    description: Unauthorized
+    content:
+      application/json:
+        example:
+          detail: "Las credenciales de autenticación no se proveyeron."
+  '405':
+    description: Method Not Allowed
+    content:
+      application/json:
+        example:
+          detail: "Metodo {{put,post,delete}} no permitido"
+          
+x-code-samples:
+  - lang: Python
+    source: |
+      import requests
+      endpoint = "https://{{subdomain}}.adminolt.com/api/get-bad-signal/"
+      headers = {
+          "Authorization": "Token {{token}}" 
+      }
+      response = requests.get(url=endpoint, headers=headers)
+      print(response.content)

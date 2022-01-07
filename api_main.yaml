@@ -133,6 +133,9 @@ paths:
   /onu/get-info-unauthorized-panel/:
     get:
       $ref: 'onu/paths/get_total_unauthorized_onus.yaml'
+  /onu/get-bad-signal/:
+    get:
+      $ref: 'onu/paths/get_total_onu_with_bad_signal.yaml'
   # POST
   /onu/authorize/:
     post:
