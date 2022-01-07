@@ -124,6 +124,9 @@ paths:
   /onu/delete/:
     get:
       $ref: 'onu/paths/get_onu_delete.yaml'
+  /onu/per-date-api/:
+    get:
+      $ref: 'onu/paths/get_total_onus_registered.yaml'
   # POST
   /onu/authorize/:
     post:
@@ -231,6 +234,7 @@ components:
       $ref: 'onu/components/get_status_of_onu_response_101.yaml'
     OnuTypesResponse:
       $ref: 'onu/components/get_onu_types_list_response.yaml'
+
 
 
   ### RequestBody DATA in ENDPOINTS POST/PUT ###

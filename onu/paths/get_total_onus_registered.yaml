@@ -1,0 +1,59 @@
+tags:
+- ONUs
+summary: Get total onus registered
+description: |
+  Total ONUs registered in:
+  * OLT
+  * AdminOLT
+operationId: getTotalOnusRegistered
+responses:
+  '200':
+    description: Successful Operation
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            today_onu:
+              type: integer
+              example: 2
+              description: Total onus registered today
+            total_month_onu:
+              type: integer
+              example: 10
+              description: Total onus registered current month
+            total_onu:
+                type: integer
+                example: 12
+                description: Total registered onus in general
+          
+  '203':
+    description: Non-Authoritative Information
+    content:
+      application/json:
+        example:
+          message_status: "El token enviado no es valido" 
+
+  '401':
+    description: Unauthorized
+    content:
+      application/json:
+        example:
+          detail: "Las credenciales de autenticación no se proveyeron."
+  '405':
+    description: Method Not Allowed
+    content:
+      application/json:
+        example:
+          detail: "Metodo {{put,post,delete}} no permitido"
+          
+x-code-samples:
+  - lang: Python
+    source: |
+      import requests
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/per-date-api/"
+      headers = {
+          "Authorization": "Token {{token}}" 
+      }
+      response = requests.get(url=endpoint, headers=headers)
+      print(response.content)
