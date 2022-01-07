@@ -127,6 +127,9 @@ paths:
   /onu/per-date-api/:
     get:
       $ref: 'onu/paths/get_total_onus_registered.yaml'
+  /onu/get-info-panel/:
+    get:
+      $ref: 'onu/paths/get_total_onus_authorized.yaml'
   # POST
   /onu/authorize/:
     post:
@@ -234,6 +237,8 @@ components:
       $ref: 'onu/components/get_status_of_onu_response_101.yaml'
     OnuTypesResponse:
       $ref: 'onu/components/get_onu_types_list_response.yaml'
+    TotalOnusAuthorizedResponse101:
+      $ref: 'onu/components/get_total_onus_authorized_response101.yaml'
 
 
 

@@ -1,0 +1,40 @@
+type: object
+properties:
+  dict_info_onu_panel:
+    type: object
+    properties:
+      authorized:
+        type: object
+        properties:
+          olt:
+            type: integer
+            example: 377
+            description: Total onus authorized in all connected OLTs in your AdminOLT account
+          db:
+            type: integer
+            example: 2
+            description: |
+             Total onus authorized in all connected OLTs in your AdminOLT account.
+             **Note:** Only ONUs imported into your AdminOLT account are counted
+            
+      onu_states:
+        type: object
+        properties:
+          active:
+            type: integer
+            example: 1
+            description: Total active ONUs
+          offline:
+            type: integer
+            example: 376
+            description: Total ONUs offline
+  last_update:
+    type: string
+    example: "01/07/2022, 10:02:12"
+    description: 
+  status:
+    type: string
+    example: DONE
+  task_id:
+    type: string
+    example: 878653d0-2465-497f-b37f-07905f97fa2b

@@ -1,10 +1,23 @@
 tags:
 - ONUs
-summary: Get total onus registered
+summary: Get total onus authorized
 description: |
-  Total onus registered, today, current month
-operationId: getTotalOnusRegistered
+  1. ONUs authorized in:
+    * OLT
+    * AdminOLT
+
+  2. ONUs states 
+    * Active
+    * Offline
+operationId: getTotalOnusAuthorized
 responses:
+  '101':
+    description: Web Socket Protocol Handshake
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/TotalOnusAuthorizedResponse101'
+
   '200':
     description: Successful Operation
     content:
@@ -12,18 +25,10 @@ responses:
         schema:
           type: object
           properties:
-            today_onu:
-              type: integer
-              example: 2
-              description: Total onus registered today
-            total_month_onu:
-              type: integer
-              example: 10
-              description: Total onus registered current month
-            total_onu:
-                type: integer
-                example: 12
-                description: Total registered onus in general
+            facility:
+              type: string
+              example: 726de43b-54a8-4a69-b8b5-4a081760af0d
+              description: Returns a UUID of the process, to obtain data it is necessary to connect through a WebSocket through the UUID. [Example](#section/WebSocket)
           
   '203':
     description: Non-Authoritative Information
@@ -49,7 +54,7 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/per-date-api/"
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/get-info-panel/"
       headers = {
           "Authorization": "Token {{token}}" 
       }
