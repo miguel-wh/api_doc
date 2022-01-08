@@ -24,22 +24,27 @@ description: |
   ### What steps should you follow?
 
   - Consume API in any language programmation.
-  - Get facility from request
+  - Get facility from response
+
   - Open a WebSocket connection using **facility**. You can use any WebSocket client of your choice
 
   ```
       Request URL WebSocket:
       wss://{{your_subdomain}}.adminolt.com/ws/{{facility}}?subscribe-broadcast
   ```
-
   ## Example 1
+  
+  This is an example using Python-Django.
+
+  In this example we intend to consume the API from the server side, once the response 'facility' has been obtained, send this value from the client side.
+
+  On the client side, the AdminOLT libraries are provided, which will open the WebSocket connection to obtain the data.
   
   **Step 1**
 
-  - Consume API in any language programmation.
-  - Get facility from request
+  - Consume API
+  - Get facility from response
 
-  This is a example with Python-Django
   ```
   from django.shortcuts import render
   import requests
