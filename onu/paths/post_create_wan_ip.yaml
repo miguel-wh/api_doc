@@ -2,32 +2,58 @@ tags:
 - ONUs
 summary: Create Wan IP ONU
 description: |
-  lksdajlkdsajkldsajkldjklsajkldsa
-  salkdjsakdjlkaskldjlslkjkdkljsajkldjkl
-  asdsadklskljadjklsalkjdsadlksajkldjlksakldklsda
+  **PATH PARAMETERS**
+
+  | PATH PARAMETERS  | required    | description                                          |
+  | ---------------- | ------------| -----------------------------------------------------|
+  | id_onu           | TRUE        | id_onu of ONU to create wan ip (integer <number>)    |
+
   
+  ### STATIC - REQUEST BODY SCHEMA: application/json
+
   ```
-  data = {
-    'key1': '1'
-  }
+    {
+      "connection_name": "WAN IP - Conection static",
+      "vlan": 110,
+      "type": "STATIC",
+      "priority": 1,
+      "ip_index": 0,
+      "ip": "192.168.200.50",
+      "mask": "255.255.255.0",
+      "gateway": "192.168.200.1",
+      "primary_dns": "8.8.8.8",
+      "secondary_dns": "8.8.4.4"
+    }
+
   ```
 
-  sñlklsdklñsadklñslñkdlkñsd
+  ### DHCP - REQUEST BODY SCHEMA: application/json
+
+  ```
+    {
+      "connection_name": "xxx",
+      "vlan": 110,
+      "type": "DHCP",
+      "priority": 1,
+      "ip_index": "xxx"
+    }
+  ```
+
+  ### PPPoE - REQUEST BODY SCHEMA: application/json
+
+  ```
+    {
+      "connection_name": "xxx",
+      "vlan": 1,
+      "type": "PPPoE",
+      "priority": 1,
+      "ip_index": 1,
+      "username": "admin",
+      "password": "admin123"
+    }
+  ```
 operationId: createWanIP
-parameters:
-  - name: id_onu
-    in: path
-    description: id_onu of ONU to create wan ip
-    required: true
-    schema:
-      type: integer
-      format: number
 
-requestBody:
-  content:
-    application/json:
-      schema:
-        $ref: '#/components/requestBodies/CreateWanIPOnuRequestPOST'
 responses:
   '200':
     description: Created
