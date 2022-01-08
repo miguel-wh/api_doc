@@ -98,7 +98,7 @@ x-code-samples:
         "primary_dns": "8.8.8.8",
         "secondary_dns": "8.8.4.4"
       }
-      
+
       
       # If you need to create a WAP IP with a DHCP connection, send the following REQUEST BODY (Payload)
       data = {
@@ -123,5 +123,3 @@ x-code-samples:
       
       response = requests.post(url=endpoint, headers=headers, params=data)
       print(response.content)
-security:
-  - api_key: []
