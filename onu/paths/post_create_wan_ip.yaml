@@ -13,7 +13,7 @@ description: |
 
   ```
     {
-      "connection_name": "WAN IP - Conection static",
+      "connection_name": "WAN IP - Conection Static",
       "vlan": 110,
       "type": "STATIC",
       "priority": 1,
@@ -31,11 +31,11 @@ description: |
 
   ```
     {
-      "connection_name": "xxx",
+      "connection_name": "WAN IP - Conection DHCP",
       "vlan": 110,
       "type": "DHCP",
       "priority": 1,
-      "ip_index": "xxx"
+      "ip_index": 0
     }
   ```
 
@@ -43,11 +43,11 @@ description: |
 
   ```
     {
-      "connection_name": "xxx",
-      "vlan": 1,
+      "connection_name": "WAN IP - Conection PPPoE",
+      "vlan": 110,
       "type": "PPPoE",
       "priority": 1,
-      "ip_index": 1,
+      "ip_index": 0,
       "username": "admin",
       "password": "admin123"
     }
