@@ -36,9 +36,9 @@ description: |
   
   This is an example using Python-Django.
 
-  In this example we intend to consume the API from the server side, once the response 'facility' has been obtained, send this value from the client side.
+  In this example we intend to consume the API on the server side, once the response get 'ease' is obtained, send this value on the client side (Web browser).
 
-  On the client side, the AdminOLT libraries are provided, which will open the WebSocket connection to obtain the data.
+  On the client side, the AdminOLT Javascript libraries are provided, which will open the WebSocket connection to get the data.
   
   **Step 1**
 
