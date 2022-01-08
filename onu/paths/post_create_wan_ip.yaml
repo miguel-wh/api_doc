@@ -8,12 +8,17 @@ description: |
   | ---------------- | ------------| -----------------------------------------------------|
   | id_onu           | TRUE        | id_onu of ONU to create wan ip (integer <number>)    |
 
+
+  Create a WAN IP configuration depending on the type of connection desired.
+
   
   ### STATIC - REQUEST BODY SCHEMA: application/json
 
+  If you need to create a WAP IP with a static connection, use the following REQUEST BODY (Payload)
+
   ```
     {
-      "connection_name": "WAN IP - Conection Static",
+      "connection_name": "WAN IP - Static connection",
       "vlan": 110,
       "type": "STATIC",
       "priority": 1,
@@ -29,9 +34,11 @@ description: |
 
   ### DHCP - REQUEST BODY SCHEMA: application/json
 
+  If you need to create a WAP IP with a DHCP connection, use the following REQUEST BODY (Payload)
+
   ```
     {
-      "connection_name": "WAN IP - Conection DHCP",
+      "connection_name": "WAN IP - DHCP connection",
       "vlan": 110,
       "type": "DHCP",
       "priority": 1,
@@ -41,9 +48,11 @@ description: |
 
   ### PPPoE - REQUEST BODY SCHEMA: application/json
 
+  If you need to create a WAP IP with a PPPoE connection, use the following REQUEST BODY (Payload)
+
   ```
     {
-      "connection_name": "WAN IP - Conection PPPoE",
+      "connection_name": "WAN IP - PPPoE connection",
       "vlan": 110,
       "type": "PPPoE",
       "priority": 1,
