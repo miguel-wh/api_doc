@@ -9,12 +9,12 @@ description: |
   | id_onu           | TRUE        | id_onu of ONU to create wan ip (integer <number>)    |
 
 
-  Create a WAN network on the ONU, either static, DHCP or PPPoE.
+  Create a WAN network on the ONU, either Static, DHCP or PPPoE.
 
   
   ### STATIC - REQUEST BODY SCHEMA: application/json
 
-  If you need to create a WAP IP with a static connection, use the following REQUEST BODY (Payload)
+  If you need to create a WAP IP with a static connection, send the following REQUEST BODY (Payload)
 
   ```
     {
@@ -34,7 +34,7 @@ description: |
 
   ### DHCP - REQUEST BODY SCHEMA: application/json
 
-  If you need to create a WAP IP with a DHCP connection, use the following REQUEST BODY (Payload)
+  If you need to create a WAP IP with a DHCP connection, send the following REQUEST BODY (Payload)
 
   ```
     {
@@ -48,7 +48,7 @@ description: |
 
   ### PPPoE - REQUEST BODY SCHEMA: application/json
 
-  If you need to create a WAP IP with a PPPoE connection, use the following REQUEST BODY (Payload)
+  If you need to create a WAP IP with a PPPoE connection, send the following REQUEST BODY (Payload)
 
   ```
     {
@@ -84,7 +84,42 @@ x-code-samples:
       headers = {
           "Authorization": "Token {{token}}"
       }
+
+      # If you need to create a WAP IP with a static connection, send the following REQUEST BODY (Payload)
+      data = {
+        "connection_name": "WAN IP - Static connection",
+        "vlan": 110,
+        "type": "STATIC",
+        "priority": 1,
+        "ip_index": 0,
+        "ip": "192.168.200.50",
+        "mask": "255.255.255.0",
+        "gateway": "192.168.200.1",
+        "primary_dns": "8.8.8.8",
+        "secondary_dns": "8.8.4.4"
+      }
       
+      
+      # If you need to create a WAP IP with a DHCP connection, send the following REQUEST BODY (Payload)
+      data = {
+        "connection_name": "WAN IP - DHCP connection",
+        "vlan": 110,
+        "type": "DHCP",
+        "priority": 1,
+        "ip_index": 0
+      }
+
+
+      # If you need to create a WAP IP with a PPPoE connection, send the following REQUEST BODY (Payload)
+      data = {
+        "connection_name": "WAN IP - PPPoE connection",
+        "vlan": 110,
+        "type": "PPPoE",
+        "priority": 1,
+        "ip_index": 0,
+        "username": "admin",
+        "password": "admin123"
+      }
       
       response = requests.post(url=endpoint, headers=headers, params=data)
       print(response.content)
