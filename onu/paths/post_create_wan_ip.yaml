@@ -9,7 +9,7 @@ description: |
   | id_onu           | TRUE        | id_onu of ONU to create wan ip (integer <number>)    |
 
 
-  Create a WAN IP configuration depending on the type of connection desired.
+  Create a WAN network on the ONU, either static, DHCP or PPPoE.
 
   
   ### STATIC - REQUEST BODY SCHEMA: application/json
