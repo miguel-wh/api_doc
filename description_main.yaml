@@ -10,9 +10,9 @@ description: |
   If the endpoint returns the following response:
 
   ```
-  {
-    "facility": "a474b7e8-1056-4e7d-9a71-54ec32e5152d"
-  }
+    {
+      "facility": "a474b7e8-1056-4e7d-9a71-54ec32e5152d"
+    }
   ```
 
 
@@ -20,7 +20,18 @@ description: |
 
   ```facility``` It is a UUID Process, to obtain the data, it is required to open a WebSocket connection using facility.
 
-  
+
+  ### What steps should you follow?
+
+  - Consume API in any language programmation.
+  - Get facility from request
+  - Open a WebSocket connection using **facility**. You can use any WebSocket client of your choice
+
+  ```
+      Request URL WebSocket:
+      wss://{{your_subdomain}}.adminolt.com/ws/{{facility}}?subscribe-broadcast
+  ```
+
   ## Example 1
   
   **Step 1**
