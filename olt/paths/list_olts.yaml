@@ -1,7 +1,7 @@
 tags:
 - OLTs
-summary: Get all OLT
-description: Return all OLT
+summary: Get OLTs list
+description: Gets a list of all OLTs
 operationId: getOLTAll
 responses:
   '200':
