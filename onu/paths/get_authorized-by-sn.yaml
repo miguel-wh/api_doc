@@ -52,5 +52,3 @@ x-code-samples:
       }
       response = requests.get(url=endpoint, headers=headers)
       print(response.content)
-security:
-  - api_key: []
