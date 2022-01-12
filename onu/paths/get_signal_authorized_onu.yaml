@@ -31,7 +31,9 @@ responses:
           type: object
           properties:
             facility:
+              type: string
               example: null
+              description: If the ONU don't have signal, return "--"
             description:
               type: string
               example: "ONU don't exists"

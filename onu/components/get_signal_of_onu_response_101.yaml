@@ -10,10 +10,10 @@ properties:
         type: string
         example: -17.4 / -17.06
       signal_1310:
-        type: integer
+        type: string
         example: -17.06
       signal_1490:
-        type: integer
+        type: string
         example: -17.4
         
   status:
