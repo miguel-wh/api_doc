@@ -35,29 +35,32 @@ properties:
       name:
         type: string
         example: huawei_CE58
+        description: name of onu
       cvlan:
         type: integer
         example: 110
       svlan:
         type: integer
         example: 110
-      comment:
+      comment: 
         type: string
-        example: ""
+        example: Comments about the ONU
+        description: Comments about the ONU
       address:
         type: string
-        example: ""
+        example: 8400 Cambridge Ave.estminster, MD 21157
       phone:
         type: string
-        example: ""
+        example: 919-472-0215
       longitude:
         type: string
-        example: ""
+        example: "84.1918"
       latitude:
         type: string
-        example: ""
+        example: "-39.9553"
       external_id:
-        example: null
+        type: integer
+        example: 787
       enable:
         type: boolean
         example: true
@@ -76,7 +79,7 @@ properties:
         example: Huawei MA5680T
       olt_id:
         type: integer
-        example: 4
+        example: 1
       image:
         type: string
         example: "/media/empresa/onu/hg8326r.png"
