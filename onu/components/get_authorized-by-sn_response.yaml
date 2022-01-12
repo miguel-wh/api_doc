@@ -86,10 +86,10 @@ properties:
         example: name_of_splitter_or_nap
       status:
         type: string
-        example: name_of_onu_type
+        example: Online
       type:
         type: string
-        example: null
+        example: name_of_onu_type
       olt_class_type:
         type: string
         example: Huawei
