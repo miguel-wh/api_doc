@@ -10,7 +10,7 @@ items:
       example: 1130
     sn:
       type: string
-      example:
+      example: 48575443B082CE58
       description: SN (Serial Number) of ONU
     mode:
       type: string
