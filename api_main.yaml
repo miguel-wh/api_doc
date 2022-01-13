@@ -76,6 +76,15 @@ paths:
   /list-markers/<int:id_map>/:
     get:
       $ref: 'sistema/paths/maps/get_list_of_markers_of_map_by_id.yaml'
+  /list-cables/<int:id_map>/:
+    get:
+      $ref: 'sistema/paths/maps/get_list_cables_by_id_map.yaml'
+  /list-shapes/<int:id_map>/:
+    get:
+      $ref: 'sistema/paths/maps/get_list_shapes_by_id_map.yaml'
+  /list-polygons/<int:id_map>/:
+    get:
+      $ref: 'sistema/paths/maps/get_list_polygons_by_id_map.yaml'
 
   # NAP
   /naps/:
@@ -192,6 +201,12 @@ components:
       $ref: 'sistema/components/maps/get_map_by_id_response.yaml'
     GetListMarkersMapByIdResponse:
       $ref: 'sistema/components/maps/get_list_of_markers_of_map_by_id_response.yaml'
+    GetAllCablesMapResponse:
+      $ref: 'sistema/components/maps/get_list_cables_by_id_map_by_id_response.yaml'
+    GetAllShapesMapResponse:
+      $ref: 'sistema/components/maps/get_list_shapes_by_id_map_response.yaml'
+    GetAllPolygonsMapResponse:
+      $ref: 'sistema/components/maps/get_list_polygons_by_id_map_response.yaml'
     # NAP
     GetNapsList:
       $ref: 'sistema/components/nap/get_naps_list_response.yaml'
