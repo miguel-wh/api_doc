@@ -46,9 +46,16 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/onus/authorized-by-sn/<str:sn>/"
+
+      subdomain = "subdomain" # set your subdomain
+      token = "api_key" # set your token
+
+      sn = "serial_number_onu" # set serial number of onu
+
+      endpoint = "https://{0}.adminolt.com/api/onus/authorized-by-sn/{1}/".format(subdomain, sn)
       headers = {
           "Authorization": "Token {{token}}" 
       }
+      
       response = requests.get(url=endpoint, headers=headers)
       print(response.content)

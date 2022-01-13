@@ -33,9 +33,14 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/speedprofiles/download/"
+
+      subdomain = "subdomain" # set your subdomain
+      token = "api_key" # set your token
+
+      endpoint = "https://{}.adminolt.com/api/speedprofiles/download/".format(subdomain)
       headers = {
-          "Authorization": "Token {{token}}" 
+          "Authorization": "Token {}".format(token)
       }
+
       response = requests.get(url=endpoint, headers=headers)
       print(response.content)

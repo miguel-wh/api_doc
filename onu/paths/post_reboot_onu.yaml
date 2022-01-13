@@ -59,13 +59,17 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/reboot/<int:id_onu>/"
+
+      subdomain = "subdomain" # set your subdomain
+      token = "api_key" # set your token
+
+      id_onu = "id_onu" # set id of onu
+
+      endpoint = "https://{subdomain}.adminolt.com/api/onu/reboot/{id_onu}/".format(subdomain=subdomain, id_onu=id_onu)
       
       headers = {
-          "Authorization": "Token {{token}}"
+          "Authorization": "Token {}".format(token)
       }
-
-      data = {}
       
-      response = requests.post(url=endpoint, headers=headers, data=data)
+      response = requests.post(url=endpoint, headers=headers)
       print(response.content)

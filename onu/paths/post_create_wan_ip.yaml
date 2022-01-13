@@ -93,10 +93,16 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/create/wan-ip/<int:id_onu>/"
+
+      subdomain = "subdomain" # set your subdomain
+      token = "api_key" # set your token
+
+      id_onu = "id_onu" # set id of onu
+
+      endpoint = "https://{subdomain}.adminolt.com/api/onu/create/wan-ip/{id_onu}/".format(subdomain=subdomain, id_onu=id_onu)
   
       headers = {
-          "Authorization": "Token {{token}}"
+          "Authorization": "Token {}".format(token)
       }
 
       # If you need to create a WAP IP with a static connection, send the following REQUEST BODY (Payload)

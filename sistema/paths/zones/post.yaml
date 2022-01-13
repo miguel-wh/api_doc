@@ -44,18 +44,20 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/zones/"
+
+      subdomain = "subdomain" # set your subdomain
+      token = "api_key" # set your token
+
+      endpoint = "https://{}.adminolt.com/api/zones/".format(subdomain)
   
       headers = {
-          "Authorization": "Token {{token}}" 
+          "Authorization": "Token {}".format(token)
       }
       
       data = {
-          "name": "Zone 1",
-          "description": "This is my Zone"
+          "name": "name_of_zone",
+          "description": "description_of_zone"
       }
       
       response = requests.post(url=endpoint, headers=headers, data=data)
       print(response.content)
-security:
-  - api_key: []

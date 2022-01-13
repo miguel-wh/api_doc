@@ -60,9 +60,17 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/info-onu-authorized/run-status-onu/<int:id_onu>/"
+
+      subdomain = "subdomain" # set your subdomain
+      token = "api_key" # set your token
+
+      id_onu = "id_onu" # set id of onu
+
+      endpoint = "https://{0}.adminolt.com/api/info-onu-authorized/run-status-onu/{1}/".format(subdomain, id_onu)
+
       headers = {
-          "Authorization": "Token {{token}}" 
+          "Authorization": "Token {}".format(token)
       }
+
       response = requests.get(url=endpoint, headers=headers)
       print(response.content)

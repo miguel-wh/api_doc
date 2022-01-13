@@ -73,57 +73,57 @@ properties:
     example: 4194320384
   olt_id:
     type: integer
-    example: 5
-  use_advanced_config:
-    type: boolean
-    example: false
-    description: |
-      If you require advanced configuration send True. Example: ```use_advanced_config: true```. Note: This only applies to Huawei ONUs
-  advanced_config_params:
-    type: object
-    description: |
-      Advanced configuration parameters when ```use_advanced_config: true```
-      If ```use_advanced_config: false``` it is not necessary to send these parameters
-    properties:
-      line_profile:
-        type: string
-        example: 1
-      services:
-        description: |
-          You can activate multiple services.
-        type: array
-        items:
-          type: object
-          properties:
-            use_service:
-              type: boolean
-            cvlan_advanced:
-              type: string
-            svlan_advanced:
-              type: string
-            upload_speed_advanced:
-              type: integer
-            download_speed_advanced:
-              type: integer
-            service:
-              type: string
-              example: INTERNET
-        example:
-          - use_service: true
-            cvlan_advanced: 100
-            svlan_advanced: 100
-            upload_speed_advanced: 4
-            download_speed_advanced: 5
-            service: INTERNET
-          - use_service: true
-            cvlan_advanced: 200
-            svlan_advanced: 200
-            upload_speed_advanced: 4
-            download_speed_advanced: 5
-            service: IPTV
-          - use_service: true
-            cvlan_advanced: 300
-            svlan_advanced: 300
-            upload_speed_advanced: 4
-            download_speed_advanced: 5
-            service: VOIP
+    example: 1
+#  use_advanced_config:
+#    type: boolean
+#    example: false
+#    description: |
+#      If you require advanced configuration send True. Example: ```use_advanced_config: true```. Note: This only applies to Huawei ONUs
+#  advanced_config_params:
+#    type: object
+#    description: |
+#      Advanced configuration parameters when ```use_advanced_config: true```
+#      If ```use_advanced_config: false``` it is not necessary to send these parameters
+#    properties:
+#      line_profile:
+#        type: string
+#        example: 1
+#      services:
+#        description: |
+#          You can activate multiple services.
+#        type: array
+#        items:
+#          type: object
+#          properties:
+#            use_service:
+#              type: boolean
+#            cvlan_advanced:
+#              type: string
+#            svlan_advanced:
+#              type: string
+#            upload_speed_advanced:
+#              type: integer
+#            download_speed_advanced:
+#              type: integer
+#            service:
+#              type: string
+#              example: INTERNET
+#        example:
+#          - use_service: true
+#            cvlan_advanced: 100
+#            svlan_advanced: 100
+#            upload_speed_advanced: 4
+#            download_speed_advanced: 5
+#            service: INTERNET
+#          - use_service: true
+#            cvlan_advanced: 200
+#            svlan_advanced: 200
+#            upload_speed_advanced: 4
+#            download_speed_advanced: 5
+#            service: IPTV
+#          - use_service: true
+#            cvlan_advanced: 300
+#            svlan_advanced: 300
+#            upload_speed_advanced: 4
+#            download_speed_advanced: 5
+#            service: VOIP

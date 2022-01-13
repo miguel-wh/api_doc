@@ -100,9 +100,9 @@ paths:
   /olt/line-profiles/<int:olt_id>/:
     get:
       $ref: 'olt/paths/get_line_profiles_list.yaml'
-  /example-users/:
-    get:
-      $ref: 'olt/paths/users_list.yaml'
+  #/example-users/:
+  #  get:
+  #    $ref: 'olt/paths/users_list.yaml'
 
   # All about ONUs
   # GET

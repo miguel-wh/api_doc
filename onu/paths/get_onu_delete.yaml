@@ -48,13 +48,18 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/delete/"
-      
+
+      subdomain = "subdomain" # set your subdomain
+      token = "api_key" # set your token
+
+      endpoint = "https://{}.adminolt.com/api/onu/delete/".format(subdomain)
       headers = {
-          "Authorization": "Token {{token}}"
+          "Authorization": "Token {}".format(token)
       }
 
-      params = {'sn': "265754431B2CE496"}
+      params = {
+        'sn': "serial_number_onu" # set serial number of onu
+      }
       
       response = requests.get(url=endpoint, headers=headers, params=params)
       print(response.content)

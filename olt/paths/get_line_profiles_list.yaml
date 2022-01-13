@@ -55,9 +55,16 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/olt/line-profiles/<int:olt_id>/"
+
+      subdomain = "subdomain" # set your subdomain
+      token = "api_key" # set your token
+
+      olt_id = "id_onu" # set id of olt
+
+      endpoint = "https://{subdomain}.adminolt.com/api/olt/line-profiles/{olt_id}/".format(subdomain=subdomain, olt_id=olt_id)
       headers = {
-          "Authorization": "Token {{token}}" 
+          "Authorization": "Token {}".format(token)
       }
+
       response = requests.get(url=endpoint, headers=headers)
       print(response.content)
