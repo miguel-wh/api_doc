@@ -1,12 +1,12 @@
 tags:
 - ONUs
-summary: Reebot ONU
-description: Reebot an ONU through the id
-operationId: addReebotONU
+summary: Reboot ONU
+description: Reboot an ONU through the id
+operationId: addRebootONU
 parameters:
   - name: id_onu
     in: path
-    description: id_onu of ONU to reebot
+    description: id_onu of ONU to reboot
     required: true
     schema:
       type: integer
@@ -40,6 +40,20 @@ responses:
             task_id:
               type: string
               example: 31f07102-26d3-40f7-9525-666801068c92
+
+  '400':
+    description: Not Found
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            facility:
+              type: string
+              example: None
+            description:
+              type: string
+              example: ONU don't exists
 
 x-code-samples:
   - lang: Python

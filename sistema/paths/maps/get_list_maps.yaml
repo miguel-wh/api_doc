@@ -22,12 +22,6 @@ responses:
       application/json:
         example:
           detail: "Las credenciales de autenticación no se proveyeron."
-  '404': 
-    description: Not Found
-    content:
-      application/json:
-        example:
-          detail: "No encontrado."
   '405':
     description: Method Not Allowed
     content:
@@ -44,5 +38,3 @@ x-code-samples:
       }
       response = requests.get(url=endpoint, headers=headers)
       print(response.content)
-security:
-  - api_key: []

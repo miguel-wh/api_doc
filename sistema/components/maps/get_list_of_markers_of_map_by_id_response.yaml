@@ -19,6 +19,9 @@ properties:
               example: N1
             description:
               type: string
+              example: Nap 1
+            latitude:
+              type: string
               example: 19.487569038571326
             longitude:
               type: string

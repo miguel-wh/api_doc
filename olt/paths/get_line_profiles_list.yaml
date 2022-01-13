@@ -24,7 +24,21 @@ responses:
     content:
       application/json:
         example:
-          message_status: "El token enviado no es valido"      
+          message_status: "El token enviado no es valido" 
+  '400':
+    description: Not Found
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            id:
+              type: integer
+              example: olt_id
+            message:
+              type: string
+              example: OLT don't exists
+
   '401':
     description: Unauthorized
     content:

@@ -2,7 +2,7 @@ tags:
 - ONUs
 summary: Delete ONU by ONU serial number
 description: Delete an ONU in the OLT and in AdminOLT by specifying the ONU's serial number
-operationId: addEnableONU
+operationId: addDeleteONU
 requestBody:
   content:
     application/json:

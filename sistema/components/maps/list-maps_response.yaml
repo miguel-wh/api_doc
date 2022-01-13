@@ -21,25 +21,3 @@ properties:
       date_created:
         type: string
         example: "2021/11/13"
-  
-  2:
-    type: object
-    properties:
-      id:
-        type: integer
-        example: 2
-      name:
-        type: string
-        example: Mapa Centro ML
-      description:
-        type: string
-        example: Mapa Centro ML
-      markers:
-        type: integer
-        example: 12
-      distance:
-        type: integer
-        example: 65528.0
-      date_created:
-        type: string
-        example: "2021/02/16"

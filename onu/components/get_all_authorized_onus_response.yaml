@@ -32,7 +32,7 @@ items:
       example: gpon
     name:
       type: string
-      example: test_onu
+      example: name_of_onu
     cvlan:
       type: integer
       example: 110
@@ -41,22 +41,22 @@ items:
       example: 110
     comment:
       type: string
-      example: ""
+      example: "comments about the ONU"
     address:
       type: string
-      example: ""
+      example: "8400 Cambridge Ave.estminster, MD 21157"
     phone:
       type: string
-      example: ""
+      example: "919-472-0215"
     longitude:
       type: string
-      example: ""
+      example: "84.1918"
     latitude:
       type: string
-      example: ""
+      example: "-39.9553"
     external_id:
       type: integer
-      example: 5
+      example: 1
     enable:
       type: boolean
       example: true
@@ -146,13 +146,13 @@ items:
       example: MA5800 x15
     olt_id:
       type: integer
-      example: 5
+      example: 1
     image:
       type: string
       example: /media/empresa/onu/hg8326r.png
     splitter:
       type: string
-      example: NA
+      example: name_of_splitter_or_nap
     model:
       type: string
       example: HG8326R
@@ -167,7 +167,7 @@ items:
       example: Online
     type:
       type: string
-      example: null
+      example: name_of_onu_type
     service_port_onu:
       type: array
       items:
@@ -257,4 +257,4 @@ items:
       example: Huawei
     model_id:
       type: integer
-      example: 11
+      example: 1

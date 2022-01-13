@@ -58,7 +58,7 @@ x-code-samples:
   - lang: Python
     source: |
       import requests
-      endpoint = "https://{{subdomain}}.adminolt.com/api/get-bad-signal/"
+      endpoint = "https://{{subdomain}}.adminolt.com/api/onu/get-bad-signal/"
       headers = {
           "Authorization": "Token {{token}}" 
       }

@@ -41,6 +41,21 @@ responses:
               type: string
               example: cdbfb12f-ca02-47e0-8f9f-08158dba57b2
 
+
+  '400':
+    description: Not Found
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            facility:
+              type: string
+              example: None
+            description:
+              type: string
+              example: ONU don't exists
+
 x-code-samples:
   - lang: Python
     source: |

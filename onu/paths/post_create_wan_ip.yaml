@@ -74,6 +74,20 @@ responses:
             task_id:
               type: string
               example: 41ada76b-d78a-44f5-91b2-cfb088078bea
+
+  '400':
+    description: Not Found
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            facility:
+              type: string
+              example: None
+            description:
+              type: string
+              example: ONU don't exists
               
 x-code-samples:
   - lang: Python

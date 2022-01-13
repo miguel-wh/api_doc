@@ -36,7 +36,20 @@ responses:
     content:
       application/json:
         example:
-          message_status: "El token enviado no es valido"      
+          message_status: "El token enviado no es valido"
+
+  '400':
+    description: Unauthorized
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            facility:
+              type: string
+              example: |
+                None, "description": "Olt don't exists
+
   '401':
     description: Unauthorized
     content:
