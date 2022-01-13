@@ -66,7 +66,7 @@ x-code-samples:
 
       id_onu = "id_onu" # set id of onu
 
-      endpoint = "https://{0}.adminolt.com/api/info-onu-authorized/run-status-onu/{1}/".format(subdomain, id_onu)
+      endpoint = "https://{subdomain}.adminolt.com/api/info-onu-authorized/run-status-onu/{id_onu}/".format(subdomain=subdomain, id_onu=id_onu)
 
       headers = {
           "Authorization": "Token {}".format(token)
